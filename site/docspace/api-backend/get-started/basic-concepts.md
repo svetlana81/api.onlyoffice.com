@@ -1,51 +1,115 @@
 ---
 sidebar_position: -7
+sidebar_label: Introduction
+title: Introducing ONLYOFFICE DocSpace
 ---
-
-# Basic concepts
 
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
-- creating and customizing rooms for collaboration;
+- [creating and customizing rooms for collaboration](#step-3-create-a-room);
 - creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
-- inviting users to collaborate on files with them in real time.
+- inviting users to collaborate on files in real time.
 
-The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
+:::info
+The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All resources, like rooms, files, or users, have their own URLs and are designed to be manipulated in isolation.
+:::
 
-## Authentication
+## Basic concepts
 
-To interact with the API, most requests require authentication. The authentication method you choose depends on your application's purpose, its users, and the features it requires. For information and examples, visit the [Authentication](authentication/authentication.md) section.
+Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with: 
 
-## Making requests
+- **Portal:** A secure, web-based gateway that provides a gateway for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources. 
+- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](https://api.onlyoffice.com/docspace/api-backend/usage-api/create-room/) (Collaboration, Public, Custom, Form filling, Virtual data, and AI rooms) based on your specific needs.
+- **Users:** People with access to your DocSpace portal. Users are split between the owner, and other [members with different access levels](https://helpcenter.onlyoffice.com/docspace/administration/docspace-inviting-users.aspx) on who can access the documents and files in DocSpace. Other user types include the admin and guests.
 
-To identify the request and response format, please make sure that both the **Content-Type** and **Accept** headers are set to *application/json*. Any API method can be called specifying the json format for the response.
+## Quickstart
 
-## Responses
+Follow these steps to get started with ONLYOFFICE DocSpace:
 
-**If a request succeeds, it will return a status code in the 200 range** and a JSON-formatted response. Note that, in general, if a request causes a new record to be created (like a new post, or comment, etc.), the response will use the **201 Created** status. Any other successful operation (like a successful query, delete, or update) will return a 200 status code.
+### Step 1: Get ONLYOFFICE DocSpace
 
-**If a request fails, a non-200 status code will be returned** in JSON format, possibly with error information as the response content. For instance, if a requested record could not be found, the HTTP response might look something like:
+ONLYOFFICE offers these ways to access and use DocSpace:
 
-``` http
+- **Cloud version**: This method requires no installation. [Sign up to DocSpace](https://www.onlyoffice.com/docspace-registration?utm_source=api&utm_medium=article&utm_campaign=mcpserver) to get started and access your DocSpace portal. 
+- **Local server**: [ONLYOFFICE DocSpace](https://www.onlyoffice.com/download-developer.aspx#docspace-developer) is available for Windows, Linux and Docker. Follow the instructions in **ONLYOFFICE Help Center** to install on your local server:
+
+    - [Get ONLYOFFICE DocSpace for Windows](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-windows.aspx?from=api)
+    - [Get ONLYOFFICE DocSpace for Linux](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
+    - [Get ONLYOFFICE DocSpace for Docker](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
+
+### Step 2:  Authenticate your account
+
+Authenticate your account using API keys, OAuth, or any of the other [authentication methods](authentication/authentication.md) available on ONLYOFFICE DocSpace. This quickstart uses API keys. Follow these steps on [how to create and use API keys](./authentication/api-keys.md#how-to-create-api-keys) for your request.
+
+### Step 3: Create a Public room
+
+This sample request creates a **Public Room** titled **Graduation Planning**.
+
+:::note
+Set your Content-Type and Accept headers to application/json, as every endpoint in the DocSpace API supports JSON.
+:::
+
+```http
+
+POST /api/2.0/files/rooms HTTP/1.1
+Host: yourportal.onlyoffice.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer API_KEY
+Content-Length: 115
+
+{
+    "title": "Graduation planning",
+    "roomType": "PublicRoom",
+    "color": "FF0000"
+    "private": false  
+}
+
+```
+
+**Where**:
+
+- **API_KEY**: ONLYOFFICE API key.
+- **yourportal**: Your DocSpace portal
+
+:::important
+Note that the color should be a hex-code string as any other method leads to an error accessing your portal
+:::
+
+You can send requests to customize and change room details to fit your specific needs.
+
+### Decoding responses
+
+| **Response codes** | **Meaning**                                                                      |
+|--------------------|----------------------------------------------------------------------------------|
+| 200                | Successful query, delete, update, or read request.                               |
+| 201                | Successfully created a new record.                                               |
+| 400                | Bad request from client-side error                                               |
+| 401                | Client authentication error from invalid/incorrect authentication credentials.   |
+| 403                | Forbidden client request from inadequate permissions.                            |
+| 404                | Requested resource not found.                                                    |
+| 407                | Proxy authentication error from invalid/incorrect authentication credentials.    |
+| 429                | Exceeded rate limit.                                                             |
+
+- Any non-200 response status code indicates an unsuccessful response with error information in response content. 
+
+For instance, if a requested record could not be found, the HTTP response might look something like:
+
+```http
 HTTP/1.1 404 Not Found
 ```
 
-## Rate limiting
+### Rate limiting
 
-Please pay attention to some restrictions on authenticated requests:
+ONLYOFFICE DocSpace has some restrictions on authenticated requests:
 
-- You can perform up to 1500 authenticated requests per minute.
-- You can perform up to 50 simultaneous GET authenticated requests.
-- You can perform up to 15 simultaneous authenticated requests of any type except GET.
+- Up to 1500 authenticated requests per minute.
+- Up to 50 simultaneous GET authenticated requests.
+- Up to 15 simultaneous authenticated requests of any type except GET.
 - Some methods have additional restrictions. For example, you can perform up to 5 authenticated requests per minute to collect passwords.
 
-If you exceed the limit, the **429 Too Many Requests** response for the subsequent requests will be received. This response may contain additional headers:
+Exceeding the rate limit generates the **429 Too Many Requests** response for subsequent requests and may contain additional header information like:
 
-- **X-Ratelimit-Limit**. Request limit per timespan: 100/30m.
+- **X-Ratelimit-Limit**. Request limit per time span: 100/30m.
 - **X-Ratelimit-Remaining**. The number of requests left for the time window.
 - **X-Ratelimit-Reset**. The remaining window before the rate limit resets in seconds.
-
-## Conventions used in this documentation
-
-The following notation is used in the documentation:\
-**\{text\}**: indicates the text that should be replaced with your own data (ID, search query, etc.)
