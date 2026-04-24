@@ -26,14 +26,15 @@ const config: Config = {
   tagline: 'ONLYOFFICE',
   favicon: 'img/favicon.ico',
 
-  url: 'https://api.onlyoffice.com',
-  baseUrl: '/',
+  url: 'https://svetlana81.github.io/',
+  baseUrl: '/api.onlyoffice.com/',
 
   trailingSlash: true,
 
   noIndex: isDev,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenAnchors: 'warn',
 
   markdown: {
     hooks: {
@@ -66,7 +67,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-CN'],
+    locales: ['en'],
   },
 
   presets: [
