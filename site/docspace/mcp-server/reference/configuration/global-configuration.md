@@ -4,13 +4,7 @@ sidebar_position: 2
 title: Global configuration
 ---
 
-This document describes all available configuration options for the DocSpace MCP server provided through environment variables, and organized by their functional area.
-
-- [MCP options](#mcp-options): controls the behavior of the DocSpace MCP server. 
-- [API options](#api-options): configures the behavior of API requests
-- [OAuth options](#oauth-options): controls the behavior of the OAuth server
-- [Server options](#server-options): configures the behavior of the HTTP server. 
-- [Request options](#request-options): configures the behavior of incoming requests. 
+All available configuration options for the DocSpace MCP server provided through environment variables, organized by their functional area.
 
 ## MCP Options
 
@@ -65,7 +59,7 @@ Comma-separated list of tools to explicitly enable.
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
 
@@ -76,7 +70,7 @@ Comma-separated list of tools to explicitly disable.
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
 

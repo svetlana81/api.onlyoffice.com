@@ -4,11 +4,11 @@ sidebar_position: -4
 
 # Config
 
-The config base section allows you to change the platform type used, document display size (width and height) and type of the document opened.
+The config base section allows you to change the platform type used, document display size (width and height), type of the document opened, and the encrypted signature token.
 
 ## documentType
 
-`Type: string`
+**type:** `string`
 
 Defines the document type to be opened:
 
@@ -26,15 +26,15 @@ Defines the document type to be opened:
 
 ## height
 
-`Type: string`
+**type:** `string` | **default:** `"100%"`
 
-Defines the document height (**100%** by default) in the browser window.
+Defines the document height in the browser window.
 
-**Example**: `"100%"`
+**Example**: `"550px"`
 
 ## token
 
-`Type: string`
+**type:** `string`
 
 Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/browser.md).
 
@@ -42,7 +42,7 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 ## type
 
-`Type: string`
+**type:** `string` | **default:** `"desktop"`
 
 Defines the platform type used to access the document. Can be:
 
@@ -50,27 +50,52 @@ Defines the platform type used to access the document. Can be:
 - **mobile** - optimized to access the document from a tablet or a smartphone;
 - **embedded** - specifically formed to be easily embedded into a web page.
 
-The default value is **desktop**.
-
-**Example**: `"desktop"`
+**Example**: `"mobile"`
 
 ## width
 
-`Type: string`
+**type:** `string` | **default:** `"100%"`
 
-Defines the document width (**100%** by default) in the browser window.
+Defines the document width in the browser window.
 
-**Example**: `"100%"`
+**Example**: `"800px"`
+
+## document
+
+**type:** `object`
+
+The document section. See the [document](document/document.md) page for available parameters.
+
+## editorConfig
+
+**type:** `object`
+
+The editor config section. See the [editorConfig](editor/editor.md) page for available parameters.
+
+## events
+
+**type:** `object`
+
+The events section. See the [events](events.md) page for available parameters.
 
 ## Example
 
 ``` ts
 const config = {
   documentType: "word",
-  type: "desktop",
+  type: "mobile",
   height: "550px",
-  width: "100%",
+  width: "800px",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+  document: {
+    // ...
+  },
+  editorConfig: {
+    // ...
+  },
+  events: {
+    // ...
+  },
 };
 
 const docEditor = new DocsAPI.DocEditor("placeholder", config);

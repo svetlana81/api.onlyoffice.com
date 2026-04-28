@@ -7,13 +7,7 @@ sidebar_position: 4
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This page explains and demonstrates the various ways users can get the MCP server:
-
-- [Build from source](#build-the-mcp-server-from-source)
-- [Pull from Docker Hub](#pull-from-docker-hub)
-- [Build with Docker MCP toolkit](#build-with-docker-mcp-toolkit)
-- [Build with npm registry](#build-with-npm-registry)
-- [Download the GitHub release](#download-the-github-release)
+The DocSpace MCP server can be obtained in several ways depending on your environment and requirements.
 
 ## Choosing a distribution method
 
@@ -22,8 +16,8 @@ Before choosing a distribution method, consult the following table:
 | **I want to**                                | **Recommended method**         |
 |----------------------------------------------|--------------------------------|
 | Get started quickly with minimal setup       | Docker Hub, npm Registry       |
-| Run in an isolated, reproducible environment | Docker Hub, Docker MCP toolkit |
-| Use a GUI to manage everything               | Docker MCP toolkit             |
+| Run in an isolated, reproducible environment | Docker Hub, Docker MCP Toolkit |
+| Use a GUI to manage everything               | Docker MCP Toolkit             |
 | Install a specific version offline           | GitHub releases                |
 | Customize or contribute to the server        | Build from source              |
 
@@ -46,26 +40,31 @@ This method is ideal for developers who want to customize or contribute to the p
 <TabItem value="docker-image" label="Docker image">
 
 1. Clone the repository from the ONLYOFFICE Git server:
+
 ```sh
    git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
+
 ```sh
    git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
+
 ```sh
    cd docspace-mcp
 ```
 
 3. Build the Docker image:
+
 ```sh
    docker build --tag onlyoffice/docspace-mcp .
 ```
 
 4. Run the Docker container:
+
 ```sh
    docker run --interactive --rm onlyoffice/docspace-mcp
 ```
@@ -74,26 +73,31 @@ This method is ideal for developers who want to customize or contribute to the p
 <TabItem value="nodejs-app" label="Node.js app">
 
 1. Clone the repository from the ONLYOFFICE Git server:
+
 ```sh
    git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
+
 ```sh
    git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
+
 ```sh
    cd docspace-mcp
 ```
 
 3. Build the Node.js application:
+
 ```sh
    pnpm build-app
 ```
 
 4. Run the Node.js application:
+
 ```sh
    ./bin/onlyoffice-docspace-mcp
 ```
@@ -102,21 +106,25 @@ This method is ideal for developers who want to customize or contribute to the p
 <TabItem value="mcp-bundle" label="MCP bundle">
 
 1. Clone the repository from the ONLYOFFICE Git server:
+
 ```sh
    git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
+
 ```sh
    git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
+
 ```sh
    cd docspace-mcp
 ```
 
 3. Build the MCP bundle:
+
 ```sh
    pnpm build-mcpb
 ```
@@ -151,7 +159,7 @@ This method is ideal for developers who want a consistent, isolated runtime envi
    docker run --interactive --rm onlyoffice/docspace-mcp
    ```
 
-## Build with Docker MCP toolkit
+## Build with Docker MCP Toolkit
 
 This method works best for non-technical users or users who prefer a graphical interface over the command line. Before proceeding, ensure you have:
 
@@ -224,13 +232,13 @@ Use this format if your MCP client supports `.mcpb` bundle files natively (e.g.,
 1. Download the latest release:
 
    ```sh
-   VERSION=3.1.0 curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.mcpb
+   VERSION=3.1.0 curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.mcpb
    ```
 
    To download a specific version:
 
    ```sh
-   VERSION=<version> curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.mcpb
+   VERSION=<version> curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.mcpb
    ```
 
 2. Use the downloaded `.mcpb` file in an application that supports MCP bundles.
@@ -242,13 +250,13 @@ Use this format if you prefer to run the server as a standard Node.js process.
 1. Download the latest release:
 
    ```sh
-   VERSION=3.1.0 curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.tgz
+   VERSION=3.1.0 curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.tgz
    ```
 
    To download a specific version:
 
    ```sh
-   VERSION=<version> curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.tgz
+   VERSION=<version> curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.tgz
    ```
 
 2. Extract the downloaded archive:

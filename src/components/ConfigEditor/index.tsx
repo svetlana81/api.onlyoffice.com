@@ -1,22 +1,19 @@
 import styles from './styles.module.css'
-import { Provider as TooltipProvider } from "@radix-ui/react-tooltip";
 import PlayIcon from '@site/static/icons/icon-play.svg';
 import * as Tabs from "@radix-ui/react-tabs";
 import { renderers } from "./renderers";
-import rawSchema from '@site/static/schemas/config.json'
-import { JsonSchema, UISchemaElement } from "@jsonforms/core";
+import schema from '@site/src/data/config-schema.json'
+import { UISchemaElement } from "@jsonforms/core";
 import { JsonForms } from '@jsonforms/react'
 import { useColorMode } from "@docusaurus/theme-common";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
-import { filterSchema } from "./schemaFilter";
 import { CopyButton } from "./renderers/utils/CopyButton";
 import { useDebounce } from "@site/src/hooks/useDebounce";
 
 interface ConfigEditorProps {
     defaultConfig: Record<string, unknown>
     onApply: (config: Record<string, unknown>) => void
-    excludePaths?: string[]
 }
 
 const ROOT_UISCHEMA: UISchemaElement = { type: 'Control', scope: '#' } as any
@@ -31,13 +28,8 @@ const MONACO_OPTIONS = {
     fixedOverflowWidgets: true,
 }
 
-export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEditorProps) {
+export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const { colorMode } = useColorMode()
-
-    const schema = useMemo(
-        () => filterSchema(rawSchema as JsonSchema, excludePaths ?? []),
-        [excludePaths],
-    )
 
     const [formData, setFormData] = useState<Record<string, unknown>>(defaultConfig)
     const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2))
@@ -102,8 +94,7 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
     }, [])
 
     return (
-        <TooltipProvider delayDuration={200}>
-            <div className={styles.container}>
+        <div className={styles.container}>
                 <Tabs.Root value={tab} onValueChange={handleTabChange} className={styles.tabs}>
                     <Tabs.List className={styles.list}>
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
@@ -125,7 +116,7 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
                         <Tabs.Content value="form" className={styles.content} forceMount>
                             <div className={styles.formEditorContent}>
                                 <JsonForms
-                                    schema={schema}
+                                    schema={schema as any}
                                     uischema={ROOT_UISCHEMA}
                                     data={formData}
                                     renderers={renderers}
@@ -147,7 +138,6 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
                         </Tabs.Content>
                     </div>
                 </Tabs.Root>
-            </div>
-        </TooltipProvider>
+        </div>
     )
 }

@@ -37,21 +37,20 @@ Before deleting or changing anything, it's important to get a complete picture o
 
 **Try this prompt:**
 
-```
+```text
 Show me everyone who currently has access to the "Meridian Corp — Website Redesign" room, including their roles and email addresses if available.
 ```
 
 The AI calls `get_room_security_info` and returns the full member list. Review it carefully and categorize each person into `keep` and `remove` groups:
 
-- **Internal team members** (keep until archiving is complete)
+- **Team members moving to other projects** (remove now — no longer working on this project)
 - **Client stakeholders / external reviewers** (remove now — project is over)
-- **Contractors / freelancers** (remove now)
 - **Room admins** (keep until final archive step)
 
 For this scenario, you find:
-- **Sam Rivera** (Developer)  — **remove**
-- **Yuki Tanaka** (Content Writer), "freelance.content@studio.com" (Editor) — **remove**
-- **Aisha Okafor** (Content Writer), "freelance.content@studio.com" (Editor) — **remove**
+- **Sam Rivera** (Developer) — **remove** (reassigned to another project)
+- **Yuki Tanaka** (Content Writer) — **remove** (reassigned to another project)
+- **Aisha Okafor** (Content Writer) — **remove** (reassigned to another project)
 - **Marcus Webb** (Client Success Manager) — **keep for now**
 
 ### Step 2: Remove External Access
@@ -60,19 +59,19 @@ Revoke access for all external parties.
 
 **Try this prompt:**
 
-```
-Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they're all freelance contractors hired for this job. Marcus Webb is an internal team member and still retains access.
+```text
+Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they've been reassigned to other projects. Marcus Webb still needs access during the archival process.
 ```
 
 The AI calls `set_room_security` with removal instructions for the specified users.
 
 **Verify access was revoked:**
 
-```
+```text
 Show me the updated access list for "Meridian Corp — Website Redesign".
 ```
 
-Confirm that the freelancers no longer have access. This is a critical security step as external parties should never retain access to internal rooms after project completion.
+Confirm that the reassigned team members no longer have access. This is a critical security step — team members should not retain access to rooms for projects they are no longer working on.
 
 ### Step 3: Audit the Room Contents
 
@@ -80,7 +79,7 @@ Now inspect the contents of the room to decide what stays and what should be del
 
 **Try this prompt:**
 
-```
+```text
 Show me the complete contents of all folders in the "Meridian Corp — Website Redesign" room.
 ```
 
@@ -97,7 +96,7 @@ Inspect the Drafts folder to confirm what can safely be deleted.
 
 **Try this prompt:**
 
-```
+```text
 List all files in the "03 — Drafts & Work in Progress" folder with their details.
 ```
 
@@ -105,7 +104,7 @@ For each file, check the details (creation date, last modified, file name) to co
 
 **Try this prompt for any file to confirm relevance:**
 
-```
+```text
 Download and read the contents of "old-brief-draft.docx". Is there anything in it not covered by the final version in the deliverables folder?
 ```
 
@@ -117,19 +116,19 @@ Once you're confident about what to delete:
 
 **Try this prompt:**
 
-```
+```text
 Delete all files in the "03 — Drafts & Work in Progress" folder.
 ```
 
 If you want to be more selective:
 
-```
+```text
 Delete "old-brief-draft.docx" and "wireframe-sketch-v1.png" from the "03 — Drafts & Work in Progress" folder.
 ```
 
 After deleting the files, you can also remove the now-empty folder:
 
-```
+```text
 Delete the "03 — Drafts & Work in Progress" folder.
 ```
 
@@ -142,7 +141,7 @@ Before archiving, perform a final check to confirm the room is in the state you 
 
 **Try this prompt:**
 
-```
+```text
 Give me a final summary of the "Meridian Corp — Website Redesign" room — who has access, what folders exist, and what's in each folder.
 ```
 
@@ -159,7 +158,7 @@ Now close the room from active use.
 
 **Try this prompt:**
 
-```
+```text
 Archive the "Meridian Corp — Website Redesign" room.
 ```
 

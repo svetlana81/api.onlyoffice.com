@@ -55,7 +55,7 @@ export const PlaygroundToolbar = () => {
     const handleEditorTypeChange = useCallback((value: string) => {
         const newEditorType = value as EditorType
 
-        if (isScriptModified) {
+        if (isScriptModified && scriptType !== 'config') {
             setPendingEditorType(newEditorType)
             setDialogOpen(true)
         } else {
@@ -147,11 +147,14 @@ export const PlaygroundToolbar = () => {
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
-                                <Select.Item value="office-js-api" className={styles.SelectOption}>
-                                    <Select.ItemText>Office JS API</Select.ItemText>
+                                <Select.Item value="config" className={styles.SelectOption}>
+                                    <Select.ItemText>Config</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="connector" className={styles.SelectOption}>
-                                    <Select.ItemText>Connector</Select.ItemText>
+                                    <Select.ItemText>Automation API</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="office-js-api" className={styles.SelectOption}>
+                                    <Select.ItemText>Office JS API</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="plugin" className={styles.SelectOption}>
                                     <Select.ItemText>Plugin</Select.ItemText>
@@ -166,7 +169,7 @@ export const PlaygroundToolbar = () => {
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Preview:</div>
+                <div className={styles.Label}>Mode:</div>
                 <Select.Root value={previewType} onValueChange={handlePreviewTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
@@ -193,7 +196,7 @@ export const PlaygroundToolbar = () => {
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Document:</div>
+                <div className={styles.Label}>File:</div>
                 <Select.Root value={documentType} onValueChange={handleDocumentTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
@@ -204,11 +207,11 @@ export const PlaygroundToolbar = () => {
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
-                                <Select.Item value="blank" className={styles.SelectOption}>
-                                    <Select.ItemText>Blank</Select.ItemText>
-                                </Select.Item>
                                 <Select.Item value="sample" className={styles.SelectOption}>
                                     <Select.ItemText>Sample</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="blank" className={styles.SelectOption}>
+                                    <Select.ItemText>Blank</Select.ItemText>
                                 </Select.Item>
                             </Select.Viewport>
                         </Select.Content>

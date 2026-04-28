@@ -14,8 +14,6 @@ const ROOT_FIELD_ORDER: Record<string, number> = {
     'token': 5,
 }
 
-const EDITOR_CONFIG_FIELD_ORDER: Record<string, number> = {}
-
 function isPrimitiveType(schema: JsonSchema): boolean {
     const type = schema.type
     return (
@@ -26,7 +24,7 @@ function isPrimitiveType(schema: JsonSchema): boolean {
     )
 }
 
-function isComplexType(schema: JsonSchema): boolean {
+export function isComplexType(schema: JsonSchema): boolean {
     return (
         schema.type === 'object' ||
         schema.type === 'array' ||
@@ -56,13 +54,6 @@ function getSortOrder(
     path: string,
     schema?: JsonSchema
 ): number {
-    if (path === 'editorConfig') {
-        const customOrder = EDITOR_CONFIG_FIELD_ORDER[fieldName]
-        if (customOrder !== undefined) {
-            return customOrder
-        }
-    }
-
     if (!path) {
         const customOrder = ROOT_FIELD_ORDER[fieldName]
         if (customOrder !== undefined) {
