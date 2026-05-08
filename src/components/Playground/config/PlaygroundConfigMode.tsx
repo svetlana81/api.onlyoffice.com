@@ -1,67 +1,56 @@
-import { useCallback, useMemo, useRef } from "react"
-import { usePlaygroundRootContext } from "../root/PlaygroundRootContext"
-import { ConfigEditor } from "@site/src/components/ConfigEditor"
-import { EditorPreview, type EditorPreviewRef } from "@site/src/components/EditorPreview"
-import { SplitPane } from "@site/src/components/SplitPane"
-import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts"
-
-const withFreshKey = (config: Record<string, any>): Record<string, any> => ({
-    ...config,
-    document: {
-        ...(config?.document ?? {}),
-        key: crypto.randomUUID(),
-    },
-})
+import { useCallback, useMemo, useRef } from "react";
+import { usePlaygroundRootContext } from "../root/PlaygroundRootContext";
+import { ConfigEditor } from "@site/src/components/ConfigEditor";
+import { EditorPreview, type EditorPreviewRef } from "@site/src/components/EditorPreview";
+import { SplitPane } from "@site/src/components/SplitPane";
+import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
 export function PlaygroundConfigMode() {
     const {
         editorType,
-        previewType,
-        documentType,
+        modeType,
+        fileType,
         theme,
         documentServerUrl,
         documentServerSecret,
     } = usePlaygroundRootContext()
 
-    const editorRef = useRef<EditorPreviewRef>(null)
-    const latestConfigRef = useRef<Record<string, any> | null>(null)
+    const editorRef = useRef<EditorPreviewRef>(null);
+    const latestConfigRef = useRef<Record<string, any> | null>(null);
 
-    const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS
-    const fileConfig = configs[editorType] || configs.word
+    const configs = fileType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS;
+    const fileConfig = configs[editorType] || configs.word;
 
     const defaultConfig = useMemo<Record<string, unknown>>(() => ({
         documentType: fileConfig.docType,
-        type: previewType,
-        width: '100%',
-        height: '100%',
+        type: modeType,
         document: {
             fileType: fileConfig.ext,
-            key: 'demo-document-key',
+            key: `demo-document-key-${crypto.randomUUID().slice(0, 8)}`,
             title: `Example Document Title.${fileConfig.ext}`,
             url: fileConfig.url,
         },
         editorConfig: {
             callbackUrl: documentServerUrl + 'dummyCallback',
-            user: { id: 'userID', name: 'Developer' },
             customization: {
+                anonymous: { request: false },
                 uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
                 features: { featuresTips: false },
             },
             lang: 'en',
         },
-    }), [documentServerUrl, theme, fileConfig, previewType])
+    }), [documentServerUrl, theme, fileConfig, modeType]);
 
     const handleApply = useCallback((config: Record<string, unknown>) => {
-        const c = withFreshKey(config)
-        latestConfigRef.current = c
-        editorRef.current?.initEditor(c)
-    }, [])
+        latestConfigRef.current = config;
+        editorRef.current?.initEditor(config);
+    }, []);
 
     const handlePreviewReady = useCallback(() => {
         if (latestConfigRef.current) {
-            editorRef.current?.initEditor(latestConfigRef.current)
+            editorRef.current?.initEditor(latestConfigRef.current);
         }
-    }, [])
+    }, []);
 
     return (
         <SplitPane

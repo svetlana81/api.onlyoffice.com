@@ -1,5 +1,79 @@
 # Change log
 
+## 8.5.0
+
+### New features
+
+#### Playground
+
+* Added auto-generated JSON schema from TypeScript types for Config Editor
+* Added tri-state toggle (unset/true/false) and dimmed labels for unset controls in Config Editor
+* Added Config section grouping for root-level primitive fields
+
+### Improvements
+
+#### Docs API
+
+* Rewrote config reference pages with standardized formatting, backtick identifiers, and improved examples across document, editor, customization, permissions, embedded, plugins, and events sections
+* Improved usage API method documentation with parameter headers, examples, and error descriptions
+* Removed deprecated parameters: changeHistory, rename, author, created, onReady, user.firstname, user.lastname, plugins.url
+* Standardized array type notation to TypeName[] format across all config pages
+* Added missing document, editorConfig, and events sections to config overview page
+* Updated images for the events page
+* Documented removal of deprecated params in changelog entries for v6.1 and v6.3
+* Used literal union types for mode, macrosMode, pointerMode, reviewDisplay, unit, tabStyle, and tabBackground config parameters
+* Added supported language codes to lang parameter and regional settings to region parameter
+* Documented actionLink sub-properties and insert/layout toolbar sub-properties in white label config
+* Improved onMakeActionLink event documentation and extracted onRequestInsertImage undeclared note into callout
+* Used danger admonitions for deprecated mailmerge and spellcheck.change events
+
+#### Playground
+
+* Unified form/JSON dirty tracking with bidirectional sync on tab switch
+* Improved config schema types with per-document-type FileType unions and PlatformType alias
+* Cleaned up playground editor config defaults and reduced re-renders
+* Moved Run and Copy buttons from floating overlay to config editor header tab bar
+* Added Reset button to config editor header tab bar
+* Added toggleable sections for optional object and array properties in Config Editor
+
+#### Common
+
+* Added boolean token color to code syntax highlighting
+
+### Fixes
+
+#### Docs API
+
+* Added missing autostart, isLink, and hml properties to config documentation
+* Removed hardcoded permission values from sharingSettings.permissions
+* Fixed broken anchors, links, and incorrect examples across config reference pages
+* Corrected isForm type, commentGroups.view example, and grammar inconsistencies
+* Removed .ashx extension and trailing slash from example URLs
+* Fixed MCP documentation formatting issues
+* Added deprecated fileChoiceUrl, mergeFolderUrl, saveAsUrl, and sharingSettingsUrl parameters to editor config documentation
+
+#### Playground
+
+* Fixed JSON editor changes not syncing to config on Run
+* Fixed editor re-initialization and script replacement prompts
+* Fixed enum deduplication and fileType grouping by documentType
+* Fixed button style scoping and ArrayControl schema resolution
+* Fixed anonymous mode, dark mode compatibility, and PDF form document names
+* Fixed config editor section content padding and removed short descriptions from object section headers
+
+#### Localization
+
+* Fixed zh-CN product name spacing and synced translations for config pages
+
+## 8.4.1
+
+### Fixes
+
+#### Playground
+
+* Fixed editor re-initialization when script value changes in playground
+* Fixed prompt before replacing modified script on script type change
+
 ## 8.4.0
 
 ### New features
@@ -151,7 +225,7 @@
 
 #### Docs API
 
-* Fixed text document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
+* Fixed Document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
 
 #### Common
 
@@ -258,7 +332,7 @@
 * New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
 * Restructured Automation API documentation into a dedicated section with separate pages for Connector class and Connector window methods
 * Added Working with content controls sample for Automation API
-* Added links to all editor methods (text document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
+* Added links to all editor methods (document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
 
 #### Office API
 

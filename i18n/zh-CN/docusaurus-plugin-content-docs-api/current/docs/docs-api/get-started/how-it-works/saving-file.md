@@ -15,7 +15,7 @@ sidebar_position: -21
 5. **文档编辑服务**使用 [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) 通知**文档存储服务**编辑已完成，并以 [`url`](../../usage-api/callback-handler.md#url) 参数返回修改后文档的链接。
 
    :::note
-   从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status) 选择 `callbackUrl`。从 4.4 到 5.5 版本，使用最后一个加入共同编辑会话的用户的 `callbackUrl`。在 4.4 版本之前，使用第一个打开文件进行编辑的用户的 `callbackUrl`。
+   从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status*) 选择 `callbackUrl`。从 4.4 到 5.5 版本，使用最后一个加入共同编辑会话的用户的 `callbackUrl`。在 4.4 版本之前，使用第一个打开文件进行编辑的用户的 `callbackUrl`。
    :::
 
 6. **文档存储服务**从**文档编辑服务**下载包含所有已保存更改的文档文件并将其存储。
@@ -38,7 +38,7 @@ sidebar_position: -21
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
    };

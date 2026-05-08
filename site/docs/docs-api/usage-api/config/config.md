@@ -8,18 +8,22 @@ The config base section allows you to change the platform type used, document di
 
 ## documentType
 
-**type:** `string`
+**type:** `"word" | "cell" | "slide" | "pdf" | "diagram"`
 
 Defines the document type to be opened:
 
-- **word** - text document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
-- **cell** - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
-- **slide** - presentation (*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
-- **pdf** - portable document format (*.djvu, .oxps, .pdf, .xps*);
-- **diagram** - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
+- `word` - document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
+- `cell` - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
+- `slide` - presentation (*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
+- `pdf` - portable document format (*.djvu, .oxps, .pdf, .xps*);
+- `diagram` - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
 
-:::note
-**text**, **spreadsheet** and **presentation** values are deprecated since version 6.1. Please use new values instead.
+:::info
+If omitted, the document type is automatically inferred from the [`document.fileType`](document/document.md#filetype) value. If both `documentType` and `document.fileType` are omitted, an error will occur.
+:::
+
+:::danger[Deprecated]
+`text`, `spreadsheet`, and `presentation` values are deprecated since version 6.1. Please use `word`, `cell`, `slide`, `pdf`, or `diagram` instead.
 :::
 
 **Example**: `"cell"`
@@ -28,7 +32,7 @@ Defines the document type to be opened:
 
 **type:** `string` | **default:** `"100%"`
 
-Defines the document height in the browser window.
+Defines the document height in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `550px`, `calc(100vh - 48px)`, and others.
 
 **Example**: `"550px"`
 
@@ -42,13 +46,13 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 ## type
 
-**type:** `string` | **default:** `"desktop"`
+**type:** `"desktop" | "mobile" | "embedded"` | **default:** `"desktop"`
 
 Defines the platform type used to access the document. Can be:
 
-- **desktop** - optimized to access the document from a desktop or laptop computer;
-- **mobile** - optimized to access the document from a tablet or a smartphone;
-- **embedded** - specifically formed to be easily embedded into a web page.
+- `desktop` - optimized to access the document from a desktop or laptop computer;
+- `mobile` - optimized to access the document from a tablet or a smartphone;
+- `embedded` - specifically formed to be easily embedded into a web page.
 
 **Example**: `"mobile"`
 
@@ -56,7 +60,7 @@ Defines the platform type used to access the document. Can be:
 
 **type:** `string` | **default:** `"100%"`
 
-Defines the document width in the browser window.
+Defines the document width in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `800px`, `calc(100% - 240px)`, and others.
 
 **Example**: `"800px"`
 

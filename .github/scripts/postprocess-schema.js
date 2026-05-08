@@ -77,13 +77,14 @@ function collapseAnyOf(node) {
   );
   const refs = variants.filter((v) => "$ref" in v);
 
-  // object | boolean → keep object
+  // object | boolean → keep object, mark as also accepting boolean
   if (
     objects.length > 0 &&
     booleans.length > 0 &&
     objects.length + booleans.length === variants.length
   ) {
     replace(node, objects[0]);
+    node["x-alsoBoolean"] = true;
     return;
   }
 
@@ -119,10 +120,23 @@ function collapseAnyOf(node) {
       const extra = stringConsts.map((v) => v.const);
       replace(node, {
         type: def.type || "string",
-        enum: [...def.enum, ...extra],
+        enum: [...new Set([...def.enum, ...extra])],
       });
       return;
     }
+  }
+
+  // all $refs pointing to string enums → merge into single flat enum
+  if (refs.length > 1 && refs.length === variants.length) {
+    const merged = [];
+    for (const ref of refs) {
+      const refName = ref.$ref.replace("#/definitions/", "");
+      const def = schema.definitions?.[refName];
+      if (!def?.enum) return;
+      merged.push(...def.enum);
+    }
+    replace(node, { type: "string", enum: [...new Set(merged)] });
+    return;
   }
 }
 

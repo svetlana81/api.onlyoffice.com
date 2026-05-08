@@ -15,7 +15,7 @@ The figure and steps below explain how a document is saved in ONLYOFFICE Docs.
 5. The **document editing service** informs the **document storage service** that editing is complete using the [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) and returns the link to the modified document as the [`url`](../../usage-api/callback-handler.md#url) parameter.
 
    :::note
-   Since version 5.5, `callbackUrl` is selected based on the [status](../../usage-api/callback-handler.md#status) of the request. From version 4.4 to version 5.5, the `callbackUrl` from the last user who joined the co-editing session is used. Prior to version 4.4, the `callbackUrl` from the user who first opened the file for editing is used.
+   Since version 5.5, `callbackUrl` is selected based on the [status](../../usage-api/callback-handler.md#status*) of the request. From version 4.4 to version 5.5, the `callbackUrl` from the last user who joined the co-editing session is used. Prior to version 4.4, the `callbackUrl` from the user who first opened the file for editing is used.
    :::
 
 6. The **document storage service** downloads the document file with all the saved changes from the **document editing service** and stores it.
@@ -38,7 +38,7 @@ The figure and steps below explain how a document is saved in ONLYOFFICE Docs.
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
    };
