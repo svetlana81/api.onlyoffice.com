@@ -1,8 +1,8 @@
 # MoveCursorToPos
 
-将光标移动到当前文本块的指定位置。
-如果当前文本块未分配给任何文档部分，则返回 -**false**。否则，此方法返回 -**true**。
-如果文档中有任何选区，将被移除。
+Moves a cursor to a specified position of the current text run.
+If the current run is not assigned to any document part, then - **false** is returned. Otherwise, this method returns - **true**.
+If there is any selection in the document, it will be removed.
 
 ## 语法
 
@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在文档中将光标放置在文本的指定位置。
+将光标移动到文档中文本运行内的特定字符位置。
 
 ```javascript editor-docx
-// How to move the cursor to the specific position of the text in a document.
+// How do I place the cursor at a chosen position inside a text run in a document?
 
-// Add text to the paragraph and move the cursor to the 16 position in a document.
+// Position the insertion point at an exact offset within a piece of text in a document.
 
 let doc = Api.GetDocument();
 let para = doc.GetElement(0);

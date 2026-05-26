@@ -3,6 +3,8 @@ description: Get a list of content control tags in a document.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Work with content controls tags
 
 Gets the list of content controls tags.
@@ -11,9 +13,7 @@ Gets the list of content controls tags.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-tags.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-tags" />
 
 ## Installation
 
@@ -40,7 +40,7 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example work with content controls tags",
   "guid": "asc.{C36DDFB5-08F0-4A68-B829-5FB1F7D49331}",

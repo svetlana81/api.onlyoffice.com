@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/hello-world.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/hello-world" />
 
 ## 安装
 
@@ -29,7 +27,7 @@ GitHub 仓库：[helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/ma
 
 ## 配置
 
-``` json
+```json
 {
   "name": "hello world",
   "guid": "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",

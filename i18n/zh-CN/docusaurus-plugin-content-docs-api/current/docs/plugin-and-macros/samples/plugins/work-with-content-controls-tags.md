@@ -6,9 +6,7 @@
 
 **支持编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-tags.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-tags" />
 
 ## 安装
 
@@ -35,7 +33,7 @@ GitHub 仓库：[https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example work with content controls tags",
   "guid": "asc.{C36DDFB5-08F0-4A68-B829-5FB1F7D49331}",

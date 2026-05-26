@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 取消合并单元格区域
 
 取消选定的单元格区域的合并操作。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("C5:D10").UnMerge();
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Unmerge-before](/assets/images/plugins/unmerge-cells-before.png#gh-light-mode-only)![Unmerge-before](/assets/images/plugins/unmerge-cells-before.dark.png#gh-dark-mode-only) ![Unmerge-after](/assets/images/plugins/unmerge-cells-after.png#gh-light-mode-only)![Unmerge-after](/assets/images/plugins/unmerge-cells-after.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/unmerge-cell-range" dark />

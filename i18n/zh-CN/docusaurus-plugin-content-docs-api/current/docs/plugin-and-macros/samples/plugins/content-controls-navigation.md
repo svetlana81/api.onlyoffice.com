@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-navigation.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-navigation" />
 
 ## 安装
 
@@ -39,7 +37,7 @@ GitHub 仓库：[example_work_with_content_controls_navigation](https://github.c
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example work with content controls navigation",
   "guid": "asc.{C36DDFB5-08F0-4A68-B829-5FB1F7D49728}",

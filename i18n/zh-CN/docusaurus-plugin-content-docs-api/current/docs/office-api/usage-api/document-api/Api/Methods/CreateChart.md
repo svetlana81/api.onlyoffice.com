@@ -1,6 +1,9 @@
 # CreateChart
 
-使用指定的参数创建图表。
+Creates a chart with the parameters specified.
+:::note
+Values of &lt;em&gt;styleIndex&lt;/em&gt; outside - **1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+:::
 
 ## 语法
 
@@ -21,7 +24,7 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 | width | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表宽度。 |
 | height | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表高度。 |
 | styleIndex | 必需 | number |  | 图表颜色样式索引（可以是 1 - 48，如 OOXML 规范中所述）。 |
-| numFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。默认数字格式为"常规"。 |
+| numFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。 |
 
 ## 返回值
 
@@ -29,12 +32,12 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 ## 示例
 
-创建图表并将其粘贴到文档中。
+在文档中插入带有彩色数据系列的 3D 条形图。
 
 ```javascript editor-docx
-// Create a "bar3D" chart, add it to the paragraph class, and fill its series with the created solid fills in a document.
+// How do I add a bar chart with custom series colors to a document?
 
-// How to create the chart object and add it to the first paragraph of the document.
+// Visualize revenue and cost data for multiple years as a colored 3D bar chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -1,6 +1,6 @@
 # SIGN
 
-返回数字的符号：如果数字为正数则返回 **1**，如果数字为零则返回 **0**，如果数字为负数则返回 **-1**。
+Returns the sign of a number: - **1** if the number is positive, - **0** if the number is zero, or - **-1** if the number is negative.
 
 ## 语法
 
@@ -25,9 +25,9 @@ number
 在电子表格中返回数字的符号：正数为 1，零为 0，负数为 -1。
 
 ```javascript editor-xlsx
-// How to find out whether a number is positive or negative in a spreadsheet.
+// Determine the sign of a number using the SIGN function.
 
-// Use a function to get a sign of a number in a spreadsheet.
+// Apply the function to display the sign value in a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

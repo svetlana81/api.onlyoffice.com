@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/templates.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/templates" />
 
 ## 安装
 
@@ -29,7 +27,7 @@ GitHub 仓库：[templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/mas
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Document Templates",
   "guid": "asc.{94DF0B57-299D-4F68-AF6F-9A6BB53F3031}",

@@ -4,6 +4,8 @@ description: Change the value of specified cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Change cell value
 
 Changes the selected cell value.
@@ -12,7 +14,7 @@ Changes the selected cell value.
 This macro was converted from VBA code using the [AI plugin](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
 :::
 
-``` ts
+```ts
 (function(){
     // Get the active sheet
     var activeSheet = Api.GetActiveSheet();
@@ -38,4 +40,4 @@ End Sub
 
 ## Result
 
-![Change cell value](/assets/images/plugins/change-cell-value.png#gh-light-mode-only)![Change cell value](/assets/images/plugins/change-cell-value.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-value" dark />

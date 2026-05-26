@@ -10,9 +10,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/load-custom-fields.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/load-custom-fields" />
 
 ## 安装
 
@@ -35,7 +33,7 @@ GitHub 仓库：[example_customfields_load](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example loading custom fields",
   "guid": "asc.{E5A81B17-C871-4C4B-A90A-62D3A7EC0751}",

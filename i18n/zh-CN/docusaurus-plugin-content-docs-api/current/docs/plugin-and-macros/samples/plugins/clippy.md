@@ -6,9 +6,7 @@
 
 **支持的编辑器：**文档、表格、演示文稿。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/clippy.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/clippy" />
 
 ## 安装
 
@@ -37,7 +35,7 @@ GitHub 仓库：[clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Clippy",
   "guid": "asc.{5C521CB8-FD20-4CA3-83D7-1EEB8F4DC759}",

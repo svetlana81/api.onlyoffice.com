@@ -3,6 +3,8 @@ description: Insert custom text fields and dropdowns into a document.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add custom fields
 
 Inserts custom fields into the document.
@@ -11,9 +13,7 @@ Inserts custom fields into the document.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/add-custom-fields.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/add-custom-fields" />
 
 ## Installation
 
@@ -35,7 +35,7 @@ Repository on GitHub: [example_customfields_add](https://github.com/ONLYOFFICE/s
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example add custom fields",
   "guid": "asc.{4E2B5030-E1BE-41FA-BEE3-7E9BE7B5BFCF}",

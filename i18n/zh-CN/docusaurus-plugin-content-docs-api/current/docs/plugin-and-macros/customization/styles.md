@@ -7,7 +7,7 @@ description: 了解如何使用提供的 CSS 类和组件来设计 ONLYOFFICE �
 
 ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件界面适配 ONLYOFFICE 的样式，可以在 [index.html](../structure/entry-point.md) 文件中通过以下链接引入 [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) 文件：
 
-``` html
+```html
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
 ```
 
@@ -27,19 +27,19 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-text-default
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加默认的白色按钮样式。
 
 **示例**:
 
-``` html
+```html
 <button class="btn-text-default" style="width:75px;">Button 1</button>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 .btn-text-default {
     background: #fff;
     border: 1px solid #cfcfcf;
@@ -56,19 +56,19 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-text-default.submit.primary
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加主要的深灰色按钮样式。用于确认操作并提交结果。
 
 **示例**:
 
-``` html
+```html
 <button class="btn-text-default submit primary" style="width:75px;">Button 2</button>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 .btn-text-default.submit.primary {
     color: #fff;
     background-color: #7d858c;
@@ -79,19 +79,19 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-text-default.submit
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加浅灰色按钮样式。
 
 **示例**:
 
-``` html
+```html
 <button class="btn-text-default submit" style="width:75px;">Button 3</button>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 .btn-text-default.submit {
     font-weight: bold;
     background-color: #d8dadc;
@@ -103,19 +103,19 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### btn-edit
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加编辑按钮图标。
 
 **示例**:
 
-``` html
+```html
 <label class="for-combo">Edit button</label><div class="btn-edit" style="display: inline-block; margin-left: 10px;"></div>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 .btn-edit {
     width: 13px;
     height: 13px;
@@ -132,19 +132,19 @@ ONLYOFFICE 提供了用于不同界面元素的样式表。若要使你的插件
 
 ### textarea
 
-`类型： element`
+**类型：** `element`
 
 为您的插件添加文本区域输入字段。
 
 **示例**:
 
-``` html
+```html
 <textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"></textarea>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 textarea.form-control {
     resize: none;
 }
@@ -154,19 +154,19 @@ textarea.form-control {
 
 ### input[type="text"]
 
-`类型： element`
+**类型：** `element`
 
 为您的插件添加文本输入字段。
 
 **示例**:
 
-``` html
+```html
 <input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;">
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 .form-control {
     border: 1px solid #cfcfcf;
     border-radius: 2px;
@@ -188,19 +188,19 @@ textarea.form-control {
 
 ### input[type="checkbox"]
 
-`类型： element`
+**类型：** `element`
 
 为您的插件添加复选框输入。
 
 **示例**:
 
-``` html
+```html
 <input type="checkbox" class="form-control" style="vertical-align: middle;"><label style="margin-left: 5px;vertical-align: middle;">Checkbox</label>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 input[type='checkbox '].form-control {
     height: auto;
     margin: 0;
@@ -215,19 +215,19 @@ input[type='checkbox '].form-control {
 
 ### label.header
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加加粗标题标签。
 
 **示例**:
 
-``` html
+```html
 <label class="header">Header label</label>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 label.header {
     font-weight: bold;
 }
@@ -235,19 +235,19 @@ label.header {
 
 ### label.link
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加链接样式的标签。
 
 **示例**:
 
-``` html
+```html
 <label class="link">Link label</label>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 label.link {
     border-bottom: 1px dotted #aaa;
     cursor: pointer;
@@ -256,13 +256,13 @@ label.link {
 
 ## 下拉组合框
 
-`类型： function`
+**类型：** `function`
 
 使用 [select2](https://select2.org/) 库为您的插件添加下拉组合框。
 
 **示例**:
 
-``` html
+```html
 <select id="select_example" class="" ></select>
 $('#select_example').select2({
     data : [{id:0, text:'Item 1'}, {id:1, text:'Item 2'}, {id:2, text:'Item 3'}],
@@ -275,19 +275,19 @@ $('#select_example').select2({
 
 ## 加载器
 
-`类型： class`
+**类型：** `class`
 
 为您的插件添加加载器容器，用于显示加载状态。
 
 **示例**:
 
-``` html
+```html
 <div id="loader-container" class="asc-loader-container" style="margin: 10px; height: 40px; border: 1px solid #cfcfcf;"></div>
 ```
 
 **CSS 参数**:
 
-``` css
+```css
 .asc-loader-container {
     position: relative;
 }
@@ -301,7 +301,7 @@ $('#select_example').select2({
 
 ![YouTube plugin](/assets/images/plugins/youtube_interface.png)
 
-``` html
+```html
 <!-- 默认白色按钮 -->
 <button class="btn-text-default" style="width:30px;">OK</button>
 

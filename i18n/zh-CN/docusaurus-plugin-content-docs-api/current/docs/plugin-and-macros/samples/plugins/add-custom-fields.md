@@ -6,9 +6,7 @@
 
 **支持的编辑器：**文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/add-custom-fields.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/add-custom-fields" />
 
 ## 安装
 
@@ -30,7 +28,7 @@ GitHub 仓库：[**example_customfields_add**](https://github.com/ONLYOFFICE/sdk
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example add custom fields",
   "guid": "asc.{4E2B5030-E1BE-41FA-BEE3-7E9BE7B5BFCF}",

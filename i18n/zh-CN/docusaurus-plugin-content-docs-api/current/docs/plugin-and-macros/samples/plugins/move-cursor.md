@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/move-cursor.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/move-cursor" />
 
 ## 安装
 
@@ -29,7 +27,7 @@ GitHub 仓库：[示例：移动光标](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example move cursor",
   "guid": "asc.{EF5735E0-69A7-4D4A-9ABE-F58FD70F488D}",

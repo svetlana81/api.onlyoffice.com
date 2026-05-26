@@ -3,6 +3,8 @@ description: Search for text and replace it interactively.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Search and replace
 
 Searches for target text and replaces it with something else.
@@ -11,9 +13,7 @@ Searches for target text and replaces it with something else.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/search-and-replace.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/search-and-replace" />
 
 ## Installation
 
@@ -34,7 +34,7 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example of search and replace",
   "guid": "asc.{5FF5F75F-2977-4B98-8D36-7C406D610B90}",

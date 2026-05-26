@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-content.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-content" />
 
 ## 安装
 
@@ -29,7 +27,7 @@ GitHub 仓库：[example_work_with_content_controls_content](https://github.com/
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example work with content controls content",
   "guid": "asc.{C9945AC2-8275-4F9B-92E4-CA1104D7305B}",

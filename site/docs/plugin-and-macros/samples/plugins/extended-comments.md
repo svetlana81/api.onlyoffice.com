@@ -3,6 +3,8 @@ description: Manage comments with categories and severity levels.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Extended comments
 
 Pastes, edits, and removes comments and replies (with user data) in a document.
@@ -11,9 +13,7 @@ Pastes, edits, and removes comments and replies (with user data) in a document.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/extended-comments.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/extended-comments" />
 
 ## Installation
 
@@ -43,7 +43,7 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Extended comments",
   "guid": "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}",

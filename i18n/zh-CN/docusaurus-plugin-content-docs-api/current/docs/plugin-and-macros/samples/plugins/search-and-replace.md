@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/search-and-replace.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/search-and-replace" />
 
 ## 安装方式
 
@@ -29,7 +27,7 @@ GitHub 仓库：[示例：查找并替换](https://github.com/ONLYOFFICE/sdkjs-p
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example of search and replace",
   "guid": "asc.{5FF5F75F-2977-4B98-8D36-7C406D610B90}",

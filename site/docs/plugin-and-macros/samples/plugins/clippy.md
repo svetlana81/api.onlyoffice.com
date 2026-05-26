@@ -3,6 +3,8 @@ description: Add an animated clippy assistant to the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Clippy
 
 Adds a clippy assistant to the document editor.
@@ -11,9 +13,7 @@ Adds a clippy assistant to the document editor.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/clippy.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/clippy" />
 
 ## Installation
 
@@ -42,7 +42,7 @@ Repository on GitHub: [clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Clippy",
   "guid": "asc.{5C521CB8-FD20-4CA3-83D7-1EEB8F4DC759}",

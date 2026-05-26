@@ -1,7 +1,11 @@
 # AddChart
 
-从当前工作表的选定数据区域创建指定类型的图表。
-💡 请注意，水平和垂直偏移量仅在指定列和行单元格的范围内计算。如果此值超过单元格宽度或高度，将设置其他垂直/水平位置。
+Creates a chart of the specified type from the selected data range of the current sheet.
+💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and
+row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
+:::note
+Values of &lt;em&gt;nStyleIndex&lt;/em&gt; outside - **1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+:::
 
 ## 语法
 
@@ -32,12 +36,12 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 
 ## 示例
 
-在电子表格中从工作表的选定数据范围创建指定类型的图表。
+从数据范围构建条形图并将其放置在电子表格的工作表上。
 
 ```javascript editor-xlsx
-// How to add chart to the worksheet.
+// How do I turn a range of numbers into a visual chart in a spreadsheet?
 
-// Create a chart using data from a range from a worksheet.
+// Insert a titled 3D bar chart with custom series colors on top of worksheet data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

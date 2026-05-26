@@ -3,6 +3,8 @@ description: Track context menu events and cursor position changes.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Context menu and events
 
 Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position changes.
@@ -11,9 +13,7 @@ Tracks the events of calling the context menu and clicking on its items. It also
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/context-menu-and-events.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/context-menu-and-events" />
 
 ## Installation
 
@@ -34,7 +34,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## Config
 
-``` json
+```json
 {
   "name": "ContextMenu and Events",
   "guid": "asc.{B617C899-03AA-476F-8D2C-1B7272489CBC}",
@@ -109,7 +109,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## index.html
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -125,7 +125,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## Plugin code
 
-``` ts
+```ts
 console.log("work")
 window.Asc.plugin.init = function init() {}
 window.Asc.plugin.button = function button(id) {

@@ -3,6 +3,8 @@ description: Protect documents with a watermark overlay.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Settings
 
 Protects a document using a watermark.
@@ -11,9 +13,7 @@ Protects a document using a watermark.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/settings.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/settings" />
 
 ## Installation
 
@@ -31,7 +31,7 @@ Repository on GitHub: [settings](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 ## Config
 
-``` json
+```json
 {
   "name": "settings",
   "guid": "asc.{CF3A000F-C6B4-451D-AC0B-F3DDAB1880D2}",

@@ -3,6 +3,8 @@ description: Move the cursor to the document start or end.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Move cursor
 
 Moves the text cursor to the document start/end.
@@ -11,9 +13,7 @@ Moves the text cursor to the document start/end.
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/move-cursor.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/move-cursor" />
 
 ## Installation
 
@@ -34,7 +34,7 @@ Repository on GitHub: [example_move_cursor](https://github.com/ONLYOFFICE/sdkjs-
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example move cursor",
   "guid": "asc.{EF5735E0-69A7-4D4A-9ABE-F58FD70F488D}",

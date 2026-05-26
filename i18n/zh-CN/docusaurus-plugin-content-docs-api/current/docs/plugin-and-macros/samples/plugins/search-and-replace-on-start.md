@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文本文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/search-and-replace-on-start.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/search-and-replace-on-start" />
 
 ## 安装
 
@@ -28,7 +26,7 @@ GitHub 仓库：[示例：查找替换](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 配置
 
-``` json
+```json
 {
   "name": "searchAndReplaceOnStart",
   "guid": "asc.{C820F3CC-1248-4CA2-8D0F-D7EFD44DE09C}",

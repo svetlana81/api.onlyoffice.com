@@ -1,6 +1,6 @@
 # FALSE
 
-返回 **false** 逻辑值。
+Returns the - **false** logical value.
 
 ## 语法
 
@@ -23,9 +23,9 @@ boolean
 在电子表格中返回 false 逻辑值。
 
 ```javascript editor-xlsx
-// How to get false value in a spreadsheet.
+// Get the boolean false value.
 
-// Use function to get a boolean false in a spreadsheet.
+// Apply FALSE function to return false in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

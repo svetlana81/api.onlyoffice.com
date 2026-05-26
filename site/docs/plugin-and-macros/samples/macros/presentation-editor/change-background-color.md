@@ -4,11 +4,13 @@ description: Change the background color of presentation slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Change background color
 
 Sets blue color as the background of even indexed slides, if it is odd sets an image.
 
-``` ts
+```ts
 (function()
 {
     let presentation = Api.GetPresentation(); 
@@ -103,4 +105,4 @@ End Sub
 
 ## Result
 
-![Change Background Color](/assets/images/plugins/change-background-color.png#gh-light-mode-only)![Change Background Color](/assets/images/plugins/change-background-color.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/change-background-color" dark />

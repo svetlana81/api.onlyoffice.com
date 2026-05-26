@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 修改单元格的值
 
 修改选定单元格的值。
@@ -10,7 +12,7 @@ hide_table_of_contents: true
 该宏是通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)从  VBA 代码转换而来。
 :::
 
-``` ts
+```ts
 (function(){
     // 获取当前活动工作表
     var activeSheet = Api.GetActiveSheet();
@@ -36,4 +38,4 @@ End Sub
 
 ## 结果
 
-![修改单元格的值](/assets/images/plugins/change-cell-value.png#gh-light-mode-only)![修改单元格的值](/assets/images/plugins/change-cell-value.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-value" dark />
