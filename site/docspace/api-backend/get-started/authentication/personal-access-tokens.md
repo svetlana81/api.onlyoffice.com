@@ -28,7 +28,6 @@ Follow these steps to generate a PAT and use it to authorize your DocSpace accou
         :::note
         You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address. For security purposes, store your username and password in `env` variables and reference them in the request.
         :::
-
       </TabItem>
       <TabItem value="response" label="Response">
         ``` http
