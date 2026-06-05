@@ -4,18 +4,18 @@ sidebar_position: 1
 
 import DocspaceEmbed from '@site/src/components/DocspaceEmbed';
 
-# Get Started
+# Introduction
 
 The [ONLYOFFICE DocSpace Embed SDK](https://github.com/ONLYOFFICE/docspace-sdk-js), based on JavaScript, lets you embed DocSpace directly inside your web application. You can integrate a full document workspace, a standalone editor, a file picker, or a background authentication frame — with just a few lines of code.
 
-You can use it as an [npm package](./quick-start.md#using-the-npm-package) for modern web applications or connect it via a [script tag](./quick-start.md#embedding-with-a-script-tag) for a quick start. For React projects, there is also a ready-made [React component](../samples/react-samples.md).
+You can use it as an [npm package](./quickstart.md#using-the-npm-package) for modern web applications or connect it via a [script tag](./quickstart.md#embedding-with-a-script-tag) for a quick start. For React projects, there is also a ready-made [React component](../samples/react-samples.md).
 
 ## Prerequisites
 
 Before you begin, make sure you have the following:
 
-- A running DocSpace instance, either cloud or self-hosted
-- The URL of your server added to the **Developer Tools** section in DocSpace settings under the **JavaScript SDK** tab
+- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration.aspx?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer.aspx?from=api#docspace-developer)
+- The URL of your server added to the **Developer Tools** section in DocSpace settings under the **Embed SDK** tab
 - A server environment to serve your files from — opening an HTML file directly in the browser will not work
 - A modern browser — Chrome, Firefox, Edge, or Safari (the SDK relies on `postMessage` and other standard web APIs)
 
@@ -40,13 +40,28 @@ The SDK supports multiple initialization modes:
 | Room selector | Room picker dialog | Rooms only | No | No | Yes |
 | File selector | File picker dialog | Yes | No | No | Yes |
 | System | None (hidden frame) | N/A | N/A | N/A | Yes |
+| Uploader | File upload dialog | No | No | Yes (folder) | Yes |
+| Forms | Forms gallery | Yes | No | Yes (room) | Yes |
+| Chat | Chat interface | No | No | Yes (agent) | Yes |
 
 :::note
 - For Public room, editing is scoped to documents within the room.
-- Selector and system modes do not expose editing capabilities.
+- Selector, system, uploader, and chat modes do not expose editing capabilities.
 :::
 
-Ready to embed DocSpace? Follow the [Quick Start](./quick-start.md).
+Ready to embed DocSpace? Follow the [Quickstart](./quickstart.md).
+
+## Live demo
+
+To see what the SDK looks like in a real product, explore the [live demo](https://demo-embed.onlyoffice.com/) — a sample conference website with DocSpace embedded across multiple pages, each using a different mode:
+
+| Page | What's embedded |
+| --- | --- |
+| [Home](https://demo-embed.onlyoffice.com/) | Presentation playing in the Viewer mode |
+| [Program](https://demo-embed.onlyoffice.com/444-2/) | Spreadsheet in the Viewer mode; participant documents in an embedded file list |
+| [Abstract Submission](https://demo-embed.onlyoffice.com/abstract-submission/) | Fillable form open in the Editor mode |
+| [Promotional Toolkit](https://demo-embed.onlyoffice.com/promotional-toolkit/) | Marketing materials browsable in an embedded file list |
+| [Registration](https://demo-embed.onlyoffice.com/registration-2/) | Price list spreadsheet in the Viewer mode |
 
 ## Example
 

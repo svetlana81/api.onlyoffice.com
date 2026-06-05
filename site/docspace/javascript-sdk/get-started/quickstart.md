@@ -2,7 +2,13 @@
 sidebar_position: 2
 ---
 
-# Quick Start
+# Quickstart
+
+:::note
+
+Before you begin, make sure you meet the [prerequisites](./get-started.md#prerequisites).
+
+:::
 
 There are two ways to embed a working DocSpace instance in your web application. You can do it using an HTML script tag, or installing our [npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js). Both methods render DocSpace inside a `div` you control.
 
@@ -19,7 +25,7 @@ The fastest way to get DocSpace running in your app is via a script tag. No inst
 **Step 2.** Load the SDK from your DocSpace server:
 
 ```html
-<script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.1.0/api.js"></script>
+<script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.2.0/api.js"></script>
 ```
 
 **Step 3.** Initialize the frame:
@@ -53,7 +59,7 @@ Below is a basic working example you can save and serve to verify your setup:
   <body>
     <div id="ds-frame"></div>
 
-    <script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.1.0/api.js"></script>
+    <script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.2.0/api.js"></script>
 
     <script>
       const config = {
@@ -74,7 +80,7 @@ This example uses the `initManager` mode. Configuration options may change depen
 
 :::tip
 
-If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:<port>`) in your DocSpace settings under the **JavaScript SDK** tab.
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:<port>`) in your DocSpace settings under the **Embed SDK** tab.
 
 :::
 
@@ -132,7 +138,7 @@ Open `http://localhost:5173` in your browser to access your DocSpace instance.
 
 :::tip
 
-If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5173`) in your DocSpace settings under the **JavaScript SDK** tab. If you still see a Content Security Policy (CSP) error, add `checkCSP: false` to your config (for local development only).
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5173`) in your DocSpace settings under the **Embed SDK** tab. If you still see a Content Security Policy (CSP) error, add `checkCSP: false` to your config (for local development only).
 
 :::
 
