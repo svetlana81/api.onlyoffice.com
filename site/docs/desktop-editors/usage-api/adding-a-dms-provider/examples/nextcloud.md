@@ -21,94 +21,24 @@ Once connected, ONLYOFFICE Desktop Editors loads the Nextcloud web interface in 
 ## Prerequisites
 
 - ONLYOFFICE Desktop Editors **[version TBD]** or later.
-- A running [Nextcloud instance](https://github.com/juliusknorr/nextcloud-docker-dev) with the [ONLYOFFICE app](https://apps.nextcloud.com/apps/onlyoffice) installed and configured.
+- A running [Nextcloud instance](https://docs.nextcloud.com/) with the [ONLYOFFICE app](https://apps.nextcloud.com/apps/onlyoffice) installed and configured.
 - ONLYOFFICE Docs (Document Server) deployed and accessible from both the Nextcloud server (for callbacks) and the machine running Desktop Editors (for loading the editor).
 
-## Step 1: Installing the ONLYOFFICE app in Nextcloud instance
+## Step 1: Installing the ONLYOFFICE app in your Nextcloud instance
 
-1. Log in to your Nextcloud instance
+1. Log in to your Nextcloud instance.
 2. Click **Featured apps** from the dashboard.
 3. Scroll down the list for **ONLYOFFICE** and click the download icon.
 
-## Step 2: Connecting ONLYOFFICE Desktop Editor to Nextcloud
+## Step 2: Connecting ONLYOFFICE Desktop Editors to Nextcloud
 
-1. Launch the ONLYOFFICE Desktop Editor
-2. Click the **+** next to the Cloud option on the dashboard. This opens a popup with a list of possible tools for integration.
-3. Select **Nextcloud** from the dropdown list.
-4. Enter your Nextcloud instance URL
-5. Click **Connect now**
-
-## How it works
-
-The following describes the full technical flow from when you attempt to create the connection to logging out of the connection. 
-
-After the user enters their Nextcloud instance URL and click **Connect now**:
-
-1. The Desktop Editors sends a `GET` request to `{server_url}/status.php`. A `200 OK` response with a JSON body confirms that the Nextcloud instance is reachable.
-3. Desktop Editors opens an embedded Chromium browser at the URL the user entered. Since no `startPage` is defined in the Nextcloud config, the application opens the server root, which is Nextcloud's standard login page.
-4. The user logs in through the Nextcloud web interface.
-5. After authentication, the ONLYOFFICE app for Nextcloud detects that the page is loaded inside Desktop Editors by checking for the `window.AscDesktopEditor` object or the `AscDesktopEditor {version}` string in `navigator.userAgent`. For details, see [Configuring the interaction](../configuring-the-interaction.md).
-6. The ONLYOFFICE app calls the `portal:login` command to register the cloud in Desktop Editors:
-
-   ``` ts
-   window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
-     displayName: "John Smith",
-     email: "john@example.com",
-     domain: "https://nextcloud.example.com",
-     provider: "nextcloud",
-     uiTheme: "theme-dark",
-     userId: "78e1e841",
-   }));
-   ```
-
-   For the full list of `portal:login` parameters, see [Login and logout](../login-and-logout.md).
-
-7. The Nextcloud instance appears in the **Connected clouds** list.
-
-
-### Opening a document
-
-When a user browses through their Nextcloud files in the embedded browser and clicks to open a document:
-
-1. The ONLYOFFICE Nextcloud app checks for `window.AscDesktopEditor` and, instead of loading the browser-based editor, calls the `open:document` command:
-
-   ``` ts
-   window.AscDesktopEditor.execCommand("open:document", JSON.stringify({
-     url: "https://nextcloud.example.com/apps/onlyoffice/12345/",
-     type: "word",
-     provider: "nextcloud",
-   }));
-   ```
-
-   Alternatively, the app may use `window.open()` with a URL that contains the `editorPage` path — Desktop Editors intercepts the call and opens the document natively.
-
-2. Desktop Editors opens the document in its native editor. The ONLYOFFICE Docs server configured in the Nextcloud ONLYOFFICE app settings loads the editor.
-
-### Saving a document
-
-After performing their tasks and the user saves or closes the editor: 
-
-1. ONLYOFFICE Docs sends a POST callback request to the Nextcloud ONLYOFFICE app with the document status and a download URL for the updated file.
-2. The Nextcloud ONLYOFFICE app downloads the updated file and saves it to Nextcloud storage.
-3. To notify the Desktop Editors interface that the file has been updated, the app calls:
-
-    ``` ts
-    window.DesktopUpdateFile();
-    ```
-
-4. Desktop Editors refreshes the file browser to reflect the latest version.
-
-### Logging out
-
-1. When the user disconnects the cloud, the ONLYOFFICE Nextcloud app calls `portal:logout`:
-
-    ``` ts
-    window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({
-      domain: "https://nextcloud.example.com",
-    }));
-    ```
-
-2. The cloud is removed from **Connected clouds** and all session cookies for the domain are cleared.
+1. Launch ONLYOFFICE Desktop Editors.
+2. Click **+** next to **Clouds** in the left sidebar. This opens a list of available cloud services.
+3. Select **Nextcloud** from the list.
+4. Enter your Nextcloud server address in the **Cloud office URL** field.
+5. Click **Connect now**.
+6. On the Nextcloud sign-in page, enter your **Username or email** and **Password**, then click **Log in**.
+7. The Files section of your Nextcloud account opens. The connection also appears under **Clouds** in the left sidebar.
 
 ## Configuration
 
@@ -178,6 +108,80 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
+## How it works
+
+The following describes the internal technical flow behind each stage of the integration.
+
+### Connecting the cloud
+
+This section covers what happens under the hood after the user completes [Step 2](#step-2-connecting-onlyoffice-desktop-editors-to-nextcloud) and clicks **Connect now**:
+
+1. Desktop Editors sends a `GET` request to `{server_url}/status.php`. A `200 OK` response with a JSON body confirms that the Nextcloud instance is reachable.
+2. Desktop Editors opens an embedded Chromium browser at the URL the user entered. Since no `startPage` is defined in the Nextcloud config, the application opens the server root, which is Nextcloud's standard login page.
+3. The user logs in through the Nextcloud web interface.
+4. After authentication, the ONLYOFFICE app for Nextcloud detects that the page is loaded inside Desktop Editors by checking for the `window.AscDesktopEditor` object or the `AscDesktopEditor {version}` string in `navigator.userAgent`. For details, see [Configuring the interaction](../configuring-the-interaction.md).
+5. The ONLYOFFICE app calls the `portal:login` command to register the cloud in Desktop Editors:
+
+   ``` ts
+   window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
+     displayName: "John Smith",
+     email: "john@example.com",
+     domain: "https://nextcloud.example.com",
+     provider: "nextcloud",
+     uiTheme: "theme-dark",
+     userId: "78e1e841",
+   }));
+   ```
+
+   For the full list of `portal:login` parameters, see [Login and logout](../login-and-logout.md).
+
+6. The Nextcloud instance appears under **Clouds** in the left sidebar.
+
+
+### Opening a document
+
+When a user browses through their Nextcloud files in the embedded browser and clicks to open a document:
+
+1. The ONLYOFFICE Nextcloud app checks for `window.AscDesktopEditor` and, instead of loading the browser-based editor, calls the `open:document` command:
+
+   ``` ts
+   window.AscDesktopEditor.execCommand("open:document", JSON.stringify({
+     url: "https://nextcloud.example.com/apps/onlyoffice/12345/",
+     type: "word",
+     provider: "nextcloud",
+   }));
+   ```
+
+   Alternatively, the app may use `window.open()` with a URL that contains the `editorPage` path — Desktop Editors intercepts the call and opens the document natively.
+
+2. Desktop Editors opens the document in its native editor. The ONLYOFFICE Docs server configured in the Nextcloud ONLYOFFICE app settings loads the editor.
+
+### Saving a document
+
+When the user saves or closes the editor:
+
+1. ONLYOFFICE Docs sends a POST callback request to the Nextcloud ONLYOFFICE app with the document status and a download URL for the updated file.
+2. The Nextcloud ONLYOFFICE app downloads the updated file and saves it to Nextcloud storage.
+3. To notify the Desktop Editors interface that the file has been updated, the app calls:
+
+    ``` ts
+    window.DesktopUpdateFile();
+    ```
+
+4. Desktop Editors refreshes the file browser to reflect the latest version.
+
+### Logging out
+
+1. When the user disconnects the cloud, the ONLYOFFICE Nextcloud app calls `portal:logout`:
+
+    ``` ts
+    window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({
+      domain: "https://nextcloud.example.com",
+    }));
+    ```
+
+2. The cloud is removed from **Clouds** in the left sidebar and all session cookies for the domain are cleared.
+
 ## Implementing Desktop Editors support
 
 If you are building a custom integration or extending the ONLYOFFICE app for Nextcloud, implement the following JavaScript integration points on the Nextcloud side. Desktop Editors exposes two detection methods:
@@ -206,13 +210,13 @@ For details on each command, see [execCommand method](../execcommand.md).
 
 ## Troubleshooting
 
-### Unable to download the ONLYOFFICE Docs app on your Nextcloud instance
-Downloading the ONLYOFFICE Docs app requires a specific version of Nextcloud version. [Check this table](https://apps.nextcloud.com/apps/onlyoffice) to confirm if you have the correct version and update if necessary.
+### Unable to download the ONLYOFFICE app on your Nextcloud instance
+Downloading the ONLYOFFICE app requires a specific version of Nextcloud. [See the compatibility table](https://apps.nextcloud.com/apps/onlyoffice) to confirm if you have the correct version and update if necessary.
 
 ### The Nextcloud instance is not recognized when entering the URL
 Check that `status.php` is accessible at the root of your Nextcloud domain and returns `HTTP 200` with a JSON body. Some reverse proxy configurations may intercept or redirect this endpoint.
 
-### The cloud appears in Connected clouds but documents open in the browser instead of the native editor
+### The cloud appears in Clouds in the left sidebar but documents open in the browser instead of the native editor
 Verify that the ONLYOFFICE app for Nextcloud is installed and active. The app must detect `window.AscDesktopEditor` and call `open:document`. Also confirm that the `editorPage` value in *config.json* matches the actual URL path the ONLYOFFICE app uses.
 
 ### Co-editing does not work
@@ -221,5 +225,5 @@ ONLYOFFICE Docs must be reachable both from the Nextcloud server (for save callb
 ### The editor theme does not match the Nextcloud theme
 The ONLYOFFICE Nextcloud app must call `portal:uitheme` when it detects a theme change. See [Changing a theme](../changing-a-theme.md).
 
-**The file browser does not refresh after saving.**
+### The file browser does not refresh after saving
 Ensure that `window.DesktopUpdateFile` is called by the ONLYOFFICE Nextcloud app after a successful save. See [Sending notifications](../sending-notifications.md).
