@@ -92,7 +92,7 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 | Parameter | Value | Description |
 |---|---|---|
 | `check.url` | `/api2/server-info/` | Checks that the target Seafile instance is reachable and responds like a Seafile server. |
-| `editorPage` | `regex:/lib/(?:[\w-]{32,})/file/.*\.(docx|pptx|xlsx|doc|ppt|xls|odt|fodt|odp|fodp|fods)` | Matches the Seafile file routes that should be handled by the native editors. |
+| `editorPage` | `regex:/lib/<uuid>/file/<filename>` | Matches Seafile document file routes by library UUID and file extension. See the full pattern in config.json above. |
 | `editorFrameSize` | `"finite"` | Present in the shipped Seafile provider config. Public Desktop Editors docs do not yet formally document this flag. |
 | `cryptoSupport` | `"true"` | Enables end-to-end encryption support for this provider. |
 | `order` | `7` | Defines the provider position in the connection dialog. |
