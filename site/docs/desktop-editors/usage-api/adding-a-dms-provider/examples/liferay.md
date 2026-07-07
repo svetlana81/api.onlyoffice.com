@@ -70,10 +70,10 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
     "provider": "liferay",
     "name": "Liferay",
     "check": {
-        "url": "/o/onlyoffice/status",
+        "url": "/o/onlyoffice/status"
     },
-    "editorPage" : "regex:[?&]p_p_id=com_onlyoffice_liferay_docs_portlet_editorportlet.*",
-    "cryptoSupport" : "true",
+    "editorPage": "regex:[?&]p_p_id=com_onlyoffice_liferay_docs_portlet_editorportlet.*",
+    "cryptoSupport": "true",
     "order": 6,
     "icons": {
         "themeLight":{

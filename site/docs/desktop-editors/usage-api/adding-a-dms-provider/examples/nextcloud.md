@@ -71,8 +71,8 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
     "check": {
         "url": "status.php"
     },
-    "editorPage" : "/apps/onlyoffice/",
-    "cryptoSupport" : "true",
+    "editorPage": "/apps/onlyoffice/",
+    "cryptoSupport": "true",
     "order": 2,
     "icons": {
         "themeLight":{

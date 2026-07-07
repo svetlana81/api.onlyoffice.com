@@ -61,13 +61,13 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 ```json
 {
     "provider": "onlyoffice",
-    "name" : "ONLYOFFICE",
-    "check" : {
-        "url":"/api/2.0/capabilities"
+    "name": "ONLYOFFICE",
+    "check": {
+        "url": "/api/2.0/capabilities"
     },
-    "editorPage" : "regex:(\/products\/files\/doceditor.aspx)|(\/doceditor)",
+    "editorPage": "regex:(\/products\/files\/doceditor.aspx)|(\/doceditor)",
     "startPage": "/Products/Files/",
-    "cryptoSupport" : "true",
+    "cryptoSupport": "true",
     "icons": {
         "themeLight":{
             "connectionsList": "./assets/listicon.svg",
