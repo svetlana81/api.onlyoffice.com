@@ -66,24 +66,24 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 
 ```json
 {
-    "provider": "nextcloud",
-    "name": "Nextcloud",
-    "check": {
-        "url": "status.php"
+  "provider": "nextcloud",
+  "name": "Nextcloud",
+  "check": {
+    "url": "status.php"
+  },
+  "editorPage": "/apps/onlyoffice/",
+  "cryptoSupport": "true",
+  "order": 2,
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
     },
-    "editorPage": "/apps/onlyoffice/",
-    "cryptoSupport": "true",
-    "order": 2,
-    "icons": {
-        "themeLight":{
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
     }
+  }
 }
 ```
 

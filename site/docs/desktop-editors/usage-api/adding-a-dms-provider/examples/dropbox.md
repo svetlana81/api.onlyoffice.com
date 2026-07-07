@@ -59,22 +59,22 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 
 ```json
 {
-    "provider": "dropbox",
-    "name": "Dropbox",
-    "entryPage": "https://dropbox.onlyoffice.com/app",
-    "extraLogout": "https://www.dropbox.com",
-    "editorPage": "regex:\/(convert|editor)",
-    "order": 1,
-    "icons": {
-        "themeLight":{
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
+  "provider": "dropbox",
+  "name": "Dropbox",
+  "entryPage": "https://dropbox.onlyoffice.com/app",
+  "extraLogout": "https://www.dropbox.com",
+  "editorPage": "regex:\/(convert|editor)",
+  "order": 1,
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
+    },
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
     }
+  }
 }
 ```
 

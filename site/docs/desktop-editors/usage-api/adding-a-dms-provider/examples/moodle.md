@@ -67,25 +67,25 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 
 ```json
 {
-    "provider": "moodle",
-    "name": "Moodle",
-    "check": {
-        "url": "/admin/cli/checks.php"
+  "provider": "moodle",
+  "name": "Moodle",
+  "check": {
+    "url": "/admin/cli/checks.php"
+  },
+  "editorPage": "/mod/onlyofficeeditor/view.php",
+  "editorFrameSize": "finite",
+  "cryptoSupport": "true",
+  "order": 4,
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
     },
-    "editorPage": "/mod/onlyofficeeditor/view.php",
-    "editorFrameSize": "finite",
-    "cryptoSupport": "true",
-    "order": 4,
-    "icons": {
-        "themeLight":{
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
     }
+  }
 }
 ```
 

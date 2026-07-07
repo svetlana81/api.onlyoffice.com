@@ -59,22 +59,22 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 
 ```json
 {
-    "provider": "box",
-    "name": "Box",
-    "entryPage": "https://box.onlyoffice.com/app",
-    "extraLogout": "https://box.com",
-    "editorPage": "regex:execute.*onlyoffice_personal",
-    "order": 0,
-    "icons": {
-        "themeLight":{
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
+  "provider": "box",
+  "name": "Box",
+  "entryPage": "https://box.onlyoffice.com/app",
+  "extraLogout": "https://box.com",
+  "editorPage": "regex:execute.*onlyoffice_personal",
+  "order": 0,
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
+    },
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
     }
+  }
 }
 ```
 

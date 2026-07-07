@@ -67,25 +67,25 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 
 ```json
 {
-    "provider": "liferay",
-    "name": "Liferay",
-    "check": {
-        "url": "/o/onlyoffice/status"
+  "provider": "liferay",
+  "name": "Liferay",
+  "check": {
+    "url": "/o/onlyoffice/status"
+  },
+  "editorPage": "regex:[?&]p_p_id=com_onlyoffice_liferay_docs_portlet_editorportlet.*",
+  "cryptoSupport": "true",
+  "order": 6,
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
     },
-    "editorPage": "regex:[?&]p_p_id=com_onlyoffice_liferay_docs_portlet_editorportlet.*",
-    "cryptoSupport": "true",
-    "order": 6,
-    "icons": {
-        "themeLight":{
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
-    },
-    "startPage": "/o/onlyoffice/desktop/login"
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
+    }
+  },
+  "startPage": "/o/onlyoffice/desktop/login"
 }
 ```
 

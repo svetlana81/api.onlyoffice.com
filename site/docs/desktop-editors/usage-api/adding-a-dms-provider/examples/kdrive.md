@@ -60,23 +60,23 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 
 ```json
 {
-    "provider": "kdrive",
-    "name": "infomaniak kDrive",
-    "entryPage": "https://drive.infomaniak.com/app/drive",
-    "extraLogout": "https://infomaniak.com/",
-    "editorPage": "/app/office/",
-    "cryptoSupport": "true",
-    "order": 5,
-    "icons": {
-        "themeLight": {
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
+  "provider": "kdrive",
+  "name": "infomaniak kDrive",
+  "entryPage": "https://drive.infomaniak.com/app/drive",
+  "extraLogout": "https://infomaniak.com/",
+  "editorPage": "/app/office/",
+  "cryptoSupport": "true",
+  "order": 5,
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
+    },
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
     }
+  }
 }
 ```
 

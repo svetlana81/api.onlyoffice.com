@@ -65,25 +65,25 @@ The provider folder contains a `config.json` file and an `assets/` subfolder wit
 
 ```json
 {
-    "provider": "owncloud",
-    "name": "ownCloud",
-    "check": {
-        "url": "status.php"
+  "provider": "owncloud",
+  "name": "ownCloud",
+  "check": {
+    "url": "status.php"
+  },
+  "editorPage": "/apps/onlyoffice/",
+  "startPage": "/",
+  "cryptoSupport": "true",
+  "order": 3,
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
     },
-    "editorPage": "/apps/onlyoffice/",
-    "startPage": "/",
-    "cryptoSupport": "true",
-    "order": 3,
-    "icons": {
-        "themeLight":{
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
     }
+  }
 }
 ```
 
