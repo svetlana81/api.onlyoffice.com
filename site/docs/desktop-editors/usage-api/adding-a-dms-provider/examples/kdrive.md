@@ -152,4 +152,4 @@ Verify that the resulting document route contains `/app/office/` or explicitly c
 
 The provider uses `https://infomaniak.com/` as `extraLogout`. If the web session persists, sign out from the provider in the embedded page or clear cookies.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

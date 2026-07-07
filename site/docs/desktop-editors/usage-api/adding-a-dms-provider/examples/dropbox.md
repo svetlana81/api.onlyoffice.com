@@ -149,4 +149,4 @@ Verify that the bridge route still matches `/convert` or `/editor`, or explicitl
 
 The provider uses `https://www.dropbox.com` as `extraLogout`. If the Dropbox web session remains active, sign out manually in the embedded page or clear cookies.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

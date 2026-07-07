@@ -161,4 +161,4 @@ Verify that the ONLYOFFICE activity page uses `/mod/onlyofficeeditor/view.php` o
 
 Check the ONLYOFFICE Docs callback settings, JWT secret, and network reachability between Moodle and ONLYOFFICE Docs.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

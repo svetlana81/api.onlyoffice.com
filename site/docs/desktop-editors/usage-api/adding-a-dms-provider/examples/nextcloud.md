@@ -158,4 +158,4 @@ Verify that the ONLYOFFICE app is installed and that its editor pages use `/apps
 
 Make sure ONLYOFFICE Docs is reachable both from Nextcloud and from end-user machines, and verify the callback/JWT settings in the app configuration.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

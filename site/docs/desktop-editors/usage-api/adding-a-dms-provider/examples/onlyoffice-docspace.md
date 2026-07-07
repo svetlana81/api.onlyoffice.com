@@ -152,4 +152,4 @@ Verify that the portal eventually navigates to a route matching `products/files/
 
 Call `window.DesktopUpdateFile()` after the portal stores the updated file state so the embedded browser refreshes its file view.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

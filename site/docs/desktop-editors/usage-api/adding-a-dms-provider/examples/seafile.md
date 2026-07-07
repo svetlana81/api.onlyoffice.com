@@ -161,4 +161,4 @@ Compare the generated Seafile file URL with the built-in `editorPage` regex. Uns
 
 Make sure the Seafile integration calls `window.DesktopUpdateFile()` after the updated file version is stored.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

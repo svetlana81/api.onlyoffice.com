@@ -149,4 +149,4 @@ Verify that the resulting bridge URL still matches `execute.*onlyoffice_personal
 
 The provider uses `https://box.com` as `extraLogout`. If the session remains active, sign out manually in the embedded page or clear cookies.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

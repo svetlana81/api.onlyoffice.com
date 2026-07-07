@@ -159,4 +159,4 @@ Confirm that the ONLYOFFICE app is enabled and that file-opening routes use `/ap
 
 Check the ONLYOFFICE Docs URL, callback reachability, and JWT settings in the ownCloud administration page.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).

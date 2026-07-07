@@ -161,4 +161,4 @@ Verify that the ONLYOFFICE editor portlet URL still contains `p_p_id=com_onlyoff
 
 Call `window.DesktopUpdateFile()` after the saved document version is written back to Liferay.
 
-For low-level diagnostics, see [Running Desktop Editors in debug mode](../debugging.md).
+For low-level diagnostics, see [Running Desktop Editors in debug mode](../../debugging/debugging.md).
