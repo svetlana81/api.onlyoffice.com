@@ -24,7 +24,7 @@ Example: `"my-upload-button"`
 
 ### operations
 
-The list of operations displayed in the button. See [Operation parameters](#operation-parameters).
+Optional. The list of operations displayed in the button. See [Operation parameters](#operation-parameters).
 
 Type: IFloatingOperation[]
 
@@ -32,7 +32,7 @@ Example: `[uploadOperation]`
 
 ### operationsCompleted
 
-Specifies whether all operations are completed.
+Optional. Specifies whether all operations are completed.
 
 Type: boolean
 
@@ -40,7 +40,7 @@ Example: `true`
 
 ### operationsAlert
 
-Specifies whether any operation has an alert state.
+Optional. Specifies whether any operation has an alert state.
 
 Type: boolean
 
@@ -48,7 +48,7 @@ Example: `false`
 
 ### showCancelButton
 
-Specifies whether the cancel all button is displayed.
+Optional. Specifies whether the cancel all button is displayed.
 
 Type: boolean
 
@@ -56,7 +56,7 @@ Example: `true`
 
 ### cancelOperation
 
-A function called when the user clicks the cancel all button.
+Optional. A function called when the user clicks the cancel all button.
 
 Type: func
 
@@ -64,7 +64,7 @@ Example: `() => {}`
 
 ### onCancelOperationFromList
 
-A function called when the user cancels a specific operation. Receives the `operationId` of the cancelled operation.
+Optional. A function called when the user cancels a specific operation. Receives the `operationId` of the cancelled operation.
 
 Type: func
 
@@ -72,7 +72,7 @@ Example: `(operationId) => {}`
 
 ### onLoad
 
-A function called when the button is mounted. Receives a `dispatchMessage` function that can be used to send [IMessage](../plugin-message.md) updates from inside asynchronous tasks.
+Optional. A function called when the button is mounted. Receives a `dispatchMessage` function that can be used to send [IMessage](../plugin-message.md) updates from inside asynchronous tasks.
 
 Type: func
 
@@ -122,7 +122,7 @@ Example: `false`
 
 ### percent
 
-The progress of the operation as a percentage (0-100).
+Optional. The progress of the operation as a percentage (0-100). If not specified, shows an infinite loader.
 
 Type: number
 
@@ -130,7 +130,7 @@ Example: `42`
 
 ### icon
 
-The icon displayed next to the operation label. Specify the icon file name from the plugin `assets` folder.
+Optional. The icon displayed next to the operation label. Specify the icon file name from the plugin `assets` folder.
 
 Type: string
 

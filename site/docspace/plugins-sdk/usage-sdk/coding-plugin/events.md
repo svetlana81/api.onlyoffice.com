@@ -285,7 +285,9 @@ The function called when closing the selector.
 
 ## addFloatingOperationsButton
 
-The function called when adding a floating operations button. It does not work if the [floatingOperationsButtonProps](./plugin-message.md#floatingoperationsbuttonprops) parameter is not passed to the message.
+The function called when adding a floating operations button. Multiple plugins can show operations simultaneously — they will be aggregated. It does not work if the [floatingOperationsButtonProps](./plugin-message.md#floatingoperationsbuttonprops) parameter is not passed to the message.
+
+> **Note:** Each floating operation is identified by its `id`. Calling this action again will not replace the previous operations.
 
   ``` ts
   const message: IMessage = {
@@ -318,7 +320,7 @@ The function called when removing the floating operations button. It does not wo
 
 ## navigate
 
-The function called when navigating to a specific path within the portal. It does not work if the [navigatePath](./plugin-message.md#navigatepath) parameter is not passed to the message.
+The function called when navigating to a specific path within the portal. All actions listed after `navigate` will be called after the navigation is complete. It does not work if the [navigatePath](./plugin-message.md#navigatepath) parameter is not passed to the message.
 
   ``` ts
   const message: IMessage = {

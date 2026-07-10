@@ -31,7 +31,7 @@ The following parameters are shared across all selector types.
 
 ### id
 
-A unique identifier for the selector component.
+Optional. A unique identifier for the selector component.
 
 Type: string
 
@@ -39,7 +39,7 @@ Example: `"my-selector"`
 
 ### className
 
-Sets a CSS class name applied to the selector.
+Optional. Sets a CSS class name applied to the selector.
 
 Type: string
 
@@ -47,7 +47,7 @@ Example: `"my-selector-class"`
 
 ### isLoading
 
-Specifies whether to show a loading indicator for the entire selector.
+Optional. Specifies whether to show a loading indicator for the entire selector.
 
 Type: boolean
 
@@ -63,7 +63,7 @@ Example: `[{id: "1", label: "Report.pdf"}]`
 
 ### hasNextPage
 
-Specifies whether more items are available on subsequent pages.
+Optional. Specifies whether more items are available on subsequent pages.
 
 Type: boolean
 
@@ -71,7 +71,7 @@ Example: `true`
 
 ### isNextPageLoading
 
-Specifies whether the next page is currently loading.
+Optional. Specifies whether the next page is currently loading.
 
 Type: boolean
 
@@ -79,7 +79,7 @@ Example: `false`
 
 ### onLoadNextPage
 
-A function called to load the next page of items.
+Optional. A function called to load the next page of items. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -87,7 +87,7 @@ Example: `() => {}`
 
 ### totalItems
 
-The total number of items available.
+Optional. The total number of items available.
 
 Type: number
 
@@ -103,7 +103,7 @@ Example: `"Select"`
 
 ### disabledSubmitButton
 
-Specifies whether the submit button is disabled.
+Optional. Specifies whether the submit button is disabled.
 
 Type: boolean
 
@@ -111,7 +111,7 @@ Example: `false`
 
 ### onSubmit
 
-A function called when the user clicks the submit button. Receives `selectedIds`, `fileName`, and `isFooterCheckboxChecked`.
+A function called when the user clicks the submit button. Receives `selectedIds`, `fileName`, and `isFooterCheckboxChecked`. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -119,7 +119,7 @@ Example: `({selectedIds}) => {}`
 
 ### onSelect
 
-A function called when an item is selected. Receives `selectedId` and `isDoubleClick`.
+Optional. A function called when an item is selected. Receives `selectedId` and `isDoubleClick`. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -127,7 +127,7 @@ Example: `({selectedId, isDoubleClick}) => {}`
 
 ### isMultiSelect
 
-Specifies whether multiple items can be selected.
+Optional. Specifies whether multiple items can be selected.
 
 Type: boolean
 
@@ -135,7 +135,7 @@ Example: `true`
 
 ### maxSelectedItems
 
-The maximum number of items that can be selected.
+Optional. The maximum number of items that can be selected.
 
 Type: number
 
@@ -143,7 +143,7 @@ Example: `5`
 
 ### selectedItems
 
-The initially selected items.
+Optional. The initially selected items.
 
 Type: TSelectorItem[]
 
@@ -151,7 +151,7 @@ Example: `[{id: "1", label: "Report.pdf"}]`
 
 ### withHeader
 
-Specifies whether to display the header.
+Optional. Specifies whether to display the header.
 
 Type: boolean
 
@@ -159,21 +159,21 @@ Example: `true`
 
 ### headerProps
 
-Configuration of the selector header.
+Optional. Configuration of the selector header.
 
 Type: object
 
 | Name | Type | Description |
 |---|---|---|
 | label | string | The title text in the header. |
-| isCloseable | boolean | Specifies whether to show a close button. |
-| onCloseClick | func | A function called when the close button is clicked. |
-| withBackButton | boolean | Specifies whether to show a back button. |
-| onBackClick | func | A function called when the back button is clicked. |
+| isCloseable | boolean | Optional. Specifies whether to show a close button. |
+| onCloseClick | func | Optional. A function called when the close button is clicked. |
+| withBackButton | boolean | Optional. Specifies whether to show a back button. |
+| onBackClick | func | Optional. A function called when the back button is clicked. |
 
 ### withBreadCrumbs
 
-Specifies whether to display breadcrumb navigation.
+Optional. Specifies whether to display breadcrumb navigation.
 
 Type: boolean
 
@@ -181,7 +181,7 @@ Example: `true`
 
 ### breadCrumbs
 
-The breadcrumb items to display. Each item has `id`, `label`, and optional `isRoom`.
+Optional. The breadcrumb items to display. Each item has `id`, `label`, and optional `isRoom`.
 
 Type: TBreadCrumbItem[]
 
@@ -189,7 +189,7 @@ Example: `[{id: "root", label: "My Files"}]`
 
 ### isBreadCrumbsLoading
 
-Specifies whether the breadcrumbs are loading.
+Optional. Specifies whether the breadcrumbs are loading.
 
 Type: boolean
 
@@ -197,7 +197,7 @@ Example: `false`
 
 ### onSelectBreadCrumb
 
-A function called when the user clicks a breadcrumb item. Receives the breadcrumb `id`.
+Optional. A function called when the user clicks a breadcrumb item. Receives the breadcrumb `id`. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -205,7 +205,7 @@ Example: `(id) => {}`
 
 ### withCancelButton
 
-Specifies whether to display a cancel button.
+Optional. Specifies whether to display a cancel button.
 
 Type: boolean
 
@@ -213,7 +213,7 @@ Example: `true`
 
 ### cancelButtonLabel
 
-The label of the cancel button.
+Optional. The label of the cancel button.
 
 Type: string
 
@@ -221,7 +221,7 @@ Example: `"Cancel"`
 
 ### onCancel
 
-A function called when the user clicks the cancel button.
+Optional. A function called when the user clicks the cancel button. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -229,7 +229,7 @@ Example: `() => {}`
 
 ### withCheckbox
 
-Specifies whether to display a checkbox in the footer.
+Optional. Specifies whether to display a checkbox in the footer.
 
 Type: boolean
 
@@ -237,7 +237,7 @@ Example: `false`
 
 ### footerCheckboxLabel
 
-The label of the footer checkbox.
+Optional. The label of the footer checkbox.
 
 Type: string
 
@@ -245,7 +245,7 @@ Example: `"Apply to all files"`
 
 ### isChecked
 
-The initial checked state of the footer checkbox.
+Optional. The initial checked state of the footer checkbox.
 
 Type: boolean
 
@@ -253,7 +253,7 @@ Example: `false`
 
 ### emptyScreenHeader
 
-The header text displayed when there are no items.
+Optional. The header text displayed when there are no items.
 
 Type: string
 
@@ -261,7 +261,7 @@ Example: `"No files found"`
 
 ### emptyScreenDescription
 
-The description text displayed when there are no items.
+Optional. The description text displayed when there are no items.
 
 Type: string
 
@@ -269,7 +269,7 @@ Example: `"Upload files to get started"`
 
 ### descriptionText
 
-A descriptive text displayed inside the selector.
+Optional. A descriptive text displayed inside the selector.
 
 Type: string
 
@@ -277,7 +277,7 @@ Example: `"Select a destination folder"`
 
 ### onLoad
 
-A function called when the selector is mounted.
+Optional. A function called when the selector is mounted. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -285,7 +285,7 @@ Example: `() => {}`
 
 ### onClose
 
-A function called when the selector is closed.
+Optional. A function called when the selector is closed. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -299,7 +299,7 @@ Used with `SelectorType.Files`. Extends common parameters with the following:
 
 ### currentFolderId
 
-The id of the folder to open initially.
+Optional. The id of the folder to open initially.
 
 Type: string | number
 
@@ -307,7 +307,7 @@ Example: `"folder-123"`
 
 ### isRoomsOnly
 
-Specifies whether to display only rooms.
+Optional. Specifies whether to display only rooms.
 
 Type: boolean
 
@@ -315,7 +315,7 @@ Example: `false`
 
 ### openRoot
 
-Specifies whether to open the root folder initially.
+Optional. Specifies whether to open the root folder initially.
 
 Type: boolean
 
@@ -323,7 +323,7 @@ Example: `true`
 
 ### withFooterInput
 
-Specifies whether to show an input field in the footer.
+Optional. Specifies whether to show an input field in the footer.
 
 Type: boolean
 
@@ -331,7 +331,7 @@ Example: `true`
 
 ### footerInputHeader
 
-The label for the footer input field.
+Optional. The label for the footer input field.
 
 Type: string
 
@@ -339,7 +339,7 @@ Example: `"File name"`
 
 ### currentFooterInputValue
 
-The initial value of the footer input field.
+Optional. The initial value of the footer input field.
 
 Type: string
 
@@ -347,7 +347,7 @@ Example: `"New document"`
 
 ### withFooterCheckbox
 
-Specifies whether to show a checkbox in the footer.
+Optional. Specifies whether to show a checkbox in the footer.
 
 Type: boolean
 
@@ -369,7 +369,7 @@ Used with `SelectorType.Room`. Extends common parameters with the following:
 
 ### roomType
 
-The type(s) of rooms to display.
+Optional. The type(s) of rooms to display.
 
 Type: [RoomsType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Rooms.ts) | RoomsType[]
 
@@ -377,7 +377,7 @@ Example: `RoomsType.EditingRoom`
 
 ### searchArea
 
-The area to search for rooms.
+Optional. The area to search for rooms.
 
 Type: [RoomSearchArea](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Rooms.ts)
 
@@ -385,7 +385,7 @@ Example: `RoomSearchArea.Active`
 
 ### excludeItems
 
-Room ids to exclude from the list.
+Optional. Room ids to exclude from the list.
 
 Type: (number | string)[]
 
@@ -393,7 +393,7 @@ Example: `["room-1", "room-2"]`
 
 ### createDefineRoomLabel
 
-The label for the "create new room" option.
+Optional. The label for the "create new room" option.
 
 Type: string
 
@@ -401,7 +401,7 @@ Example: `"Create room"`
 
 ### createDefineRoomType
 
-The default type for newly created rooms.
+Optional. The default type for newly created rooms.
 
 Type: [RoomsType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Rooms.ts)
 
@@ -415,7 +415,7 @@ Used with `SelectorType.People`. Extends common parameters with the following:
 
 ### withGroups
 
-Specifies whether to include groups in the selector.
+Optional. Specifies whether to include groups in the selector.
 
 Type: boolean
 
@@ -423,7 +423,7 @@ Example: `true`
 
 ### isGroupsOnly
 
-Specifies whether to display only groups.
+Optional. Specifies whether to display only groups.
 
 Type: boolean
 
@@ -431,7 +431,7 @@ Example: `false`
 
 ### withGuests
 
-Specifies whether to include guest users.
+Optional. Specifies whether to include guest users.
 
 Type: boolean
 
@@ -439,7 +439,7 @@ Example: `false`
 
 ### isGuestsOnly
 
-Specifies whether to display only guest users.
+Optional. Specifies whether to display only guest users.
 
 Type: boolean
 
@@ -447,7 +447,7 @@ Example: `false`
 
 ### currentUserId
 
-The id of the current user to exclude from the list.
+Optional. The id of the current user to exclude from the list.
 
 Type: string
 
@@ -455,7 +455,7 @@ Example: `"user-123"`
 
 ### excludeItems
 
-User or group ids to exclude from the list.
+Optional. User or group ids to exclude from the list.
 
 Type: string[]
 
@@ -463,7 +463,7 @@ Example: `["user-1", "group-2"]`
 
 ### disableInvitedUsers
 
-Ids of already invited users to show as disabled.
+Optional. Ids of already invited users to show as disabled.
 
 Type: string[]
 
@@ -471,7 +471,7 @@ Example: `["user-3"]`
 
 ### roomId
 
-The id of the room the selector is related to.
+Optional. The id of the room the selector is related to.
 
 Type: string | number
 
@@ -479,7 +479,7 @@ Example: `"room-456"`
 
 ### alwaysShowFooter
 
-Specifies whether the footer is always visible, even when nothing is selected.
+Optional. Specifies whether the footer is always visible, even when nothing is selected.
 
 Type: boolean
 
@@ -487,7 +487,7 @@ Example: `true`
 
 ### onlyRoomMembers
 
-Specifies whether to display only members of the current room.
+Optional. Specifies whether to display only members of the current room.
 
 Type: boolean
 
@@ -501,7 +501,7 @@ Used with `SelectorType.Groups`. Extends common parameters with the following:
 
 ### onSubmit
 
-A function called when the user clicks the submit button. Receives `selectedIds`, and optional `fileName` and `isFooterCheckboxChecked`.
+A function called when the user clicks the submit button. Receives `selectedIds`, and optional `fileName` and `isFooterCheckboxChecked`. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -523,7 +523,7 @@ Example: `"Report.pdf"`
 
 ### id
 
-A unique identifier for the item.
+Optional. A unique identifier for the item.
 
 Type: string | number
 
@@ -531,7 +531,7 @@ Example: `"file-123"`
 
 ### icon
 
-The URL or path to the item icon.
+Optional. The URL or path to the item icon.
 
 Type: string
 
@@ -539,7 +539,7 @@ Example: `"https://example.com/icon.svg"`
 
 ### isInputItem
 
-Specifies whether to render this item as an inline input field.
+Optional. Specifies whether to render this item as an inline input field.
 
 Type: boolean
 
@@ -547,7 +547,7 @@ Example: `true`
 
 ### defaultInputValue
 
-The default value shown in the input field when `isInputItem` is `true`.
+Optional. The default value shown in the input field when `isInputItem` is `true`.
 
 Type: string
 
@@ -555,7 +555,7 @@ Example: `"New folder"`
 
 ### onAcceptInput
 
-A function called when the user confirms the input value.
+Optional. A function called when the user confirms the input value. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -563,7 +563,7 @@ Example: `(value) => {}`
 
 ### onCancelInput
 
-A function called when the user cancels the input.
+Optional. A function called when the user cancels the input. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
@@ -571,7 +571,7 @@ Example: `() => {}`
 
 ### isCreateNewItem
 
-Specifies whether to render this item as a "create new" button.
+Optional. Specifies whether to render this item as a "create new" button.
 
 Type: boolean
 
@@ -579,7 +579,7 @@ Example: `true`
 
 ### onCreateClick
 
-A function called when the user clicks the "create new" item.
+Optional. A function called when the user clicks the "create new" item. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 

@@ -14,7 +14,7 @@ To set the link target, use [LinkTarget](https://github.com/ONLYOFFICE/docspace-
 
 ### href
 
-The URL the link points to.
+Optional. The URL the link points to.
 
 Type: string
 
@@ -22,7 +22,7 @@ Example: `"https://example.com"`
 
 ### id
 
-The HTML id attribute of the link.
+Optional. The HTML id attribute of the link.
 
 Type: string
 
@@ -30,7 +30,7 @@ Example: `"my-link"`
 
 ### isHovered
 
-Specifies whether the link is in the hovered state.
+Optional. Specifies whether the link is in the hovered state.
 
 Type: boolean
 
@@ -38,7 +38,7 @@ Example: `false`
 
 ### isTextOverflow
 
-Specifies whether to truncate the link text with an ellipsis when it overflows.
+Optional. Specifies whether to truncate the link text with an ellipsis when it overflows.
 
 Type: boolean
 
@@ -46,7 +46,7 @@ Example: `true`
 
 ### noHover
 
-Specifies whether to disable the hover style.
+Optional. Specifies whether to disable the hover style.
 
 Type: boolean
 
@@ -54,7 +54,7 @@ Example: `false`
 
 ### enableUserSelect
 
-Specifies whether the link text is user-selectable.
+Optional. Specifies whether the link text is user-selectable.
 
 Type: boolean
 
@@ -62,7 +62,7 @@ Example: `true`
 
 ### type
 
-The link type. Can be *page* (navigates to a URL) or *action* (triggers a callback).
+Optional. The link type. Can be *page* (navigates to a URL) or *action* (triggers a callback).
 
 Type: LinkType
 
@@ -70,7 +70,7 @@ Example: `LinkType.page`
 
 ### target
 
-The link target. Can be *blank*, *self*, *parent*, or *top*.
+Optional. The link target. Can be *blank*, *self*, *parent*, or *top*.
 
 Type: LinkTarget
 
@@ -78,7 +78,7 @@ Example: `LinkTarget.blank`
 
 ### textDecoration
 
-The CSS text-decoration style. Can be: *none*, *underline*, *line-through*, *overline*, *underline dotted*, *underline dashed*.
+Optional. The CSS text-decoration style. Can be: *none*, *underline*, *line-through*, *overline*, *underline dotted*, *underline dashed*.
 
 Type: string
 
@@ -86,7 +86,7 @@ Example: `"underline"`
 
 ### onClick
 
-A function called when the link is clicked.
+Optional. A function called when the link is clicked. Typically used with `LinkType.action`. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
 Type: func
 
