@@ -2,7 +2,7 @@
 
 Custom checkbox input.
 
-**Interface**: ICheckBox.
+**Interface**: ICheckbox.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-checkbox--docs).
 
@@ -12,7 +12,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ### className
 
-Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 

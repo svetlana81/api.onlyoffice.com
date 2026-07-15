@@ -269,6 +269,22 @@ Type: string
 
 Example: `"Upload files to get started"`
 
+### searchEmptyScreenHeader
+
+Optional. The header text displayed when a search yields no results.
+
+Type: string
+
+Example: `"No results found"`
+
+### searchEmptyScreenDescription
+
+Optional. The description text displayed when a search yields no results.
+
+Type: string
+
+Example: `"Try a different search query"`
+
 ### descriptionText
 
 Optional. A descriptive text displayed inside the selector.
@@ -471,6 +487,14 @@ Type: string[]
 
 Example: `["user-3"]`
 
+### disableDisabledUsers
+
+Optional. Specifies whether to hide users with a "disabled" status from the list.
+
+Type: boolean
+
+Example: `false`
+
 ### roomId
 
 Optional. The id of the room the selector is related to.
@@ -494,6 +518,14 @@ Optional. Specifies whether to display only members of the current room.
 Type: boolean
 
 Example: `false`
+
+### targetEntityType
+
+Optional. The type of entity for which the user is being selected (e.g. for sharing a file).
+
+Type: "file" | "folder" | "room"
+
+Example: `"file"`
 
 ---
 

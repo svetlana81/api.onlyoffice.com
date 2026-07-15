@@ -24,9 +24,9 @@ Add a new profile menu item.
 
 Parameters:
 
-| Name             | Type             | Example | Description                  |
-| ---------------- | ---------------- | ------- | ---------------------------- |
-| profileMenuItems | IProfileMenuItem |         | Defines a profile menu item. |
+| Name | Type             | Example | Description                  |
+| ---- | ---------------- | ------- | ---------------------------- |
+| item | IProfileMenuItem |         | Defines a profile menu item. |
 
 ### getProfileMenuItems
 
@@ -38,14 +38,14 @@ Update the profile menu item.
 
 Parameters:
 
-| Name             | Type             | Example | Description                      |
-| ---------------- | ---------------- | ------- | -------------------------------- |
-| profileMenuItems | IProfileMenuItem |         | Defines a new profile menu item. |
+| Name | Type             | Example | Description                      |
+| ---- | ---------------- | ------- | -------------------------------- |
+| item | IProfileMenuItem |         | Defines a new profile menu item. |
 
 ## Example
 
 ``` ts
-import {type IProfileMenuItemIProfileMenuPlugin, type IProfileMenuPlugin} from "@onlyoffice/docspace-plugin-sdk"
+import {type IProfileMenuItem, type IProfileMenuPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IProfileMenuPlugin {
   profileMenuItems = new Map<string, IProfileMenuItem>()

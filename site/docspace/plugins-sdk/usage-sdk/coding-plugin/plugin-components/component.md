@@ -39,7 +39,7 @@ export const adminButtonProps: IButton = {
 
 const buttonComponent: ButtonGroup = {
   component: Components.button,
-  props: buttonProps,
+  props: adminButtonProps,
   contextName: "acceptButton",
 }
 ```

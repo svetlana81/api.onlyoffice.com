@@ -14,7 +14,7 @@ To change the input size, use **InputSize** (*base, middle, big, huge, large*), 
 
 ### className
 
-Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
 
 Type: string
 
