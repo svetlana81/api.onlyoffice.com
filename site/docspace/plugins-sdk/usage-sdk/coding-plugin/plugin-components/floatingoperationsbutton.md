@@ -12,9 +12,9 @@ To control the floating operations button, use the following actions in the [IMe
 
 To set the operation type, use [FloatingOperationType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFloatingOperationsButton.ts): *download, convert, copy, duplicate, markAsRead, deletePermanently, exportIndex, move, trash, other, upload, deleteVersionFile, backup*.
 
-## Parameters
+## Extra parameters
 
-### id
+### id {#button-id}
 
 The unique identifier of the floating operations button.
 
@@ -80,7 +80,7 @@ Example: `(dispatchMessage) => {}`
 
 ## Operation parameters
 
-### id
+### id {#operation-id}
 
 The unique identifier of the operation.
 

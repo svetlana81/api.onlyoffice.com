@@ -287,7 +287,9 @@ The function called when closing the selector.
 
 The function called when adding a floating operations button. Multiple plugins can show operations simultaneously — they will be aggregated. It does not work if the [floatingOperationsButtonProps](./plugin-message.md#floatingoperationsbuttonprops) parameter is not passed to the message.
 
-> **Note:** Each floating operation is identified by its `id`. Calling this action again will not replace the previous operations.
+:::note
+Each floating operation is identified by its `id`. Calling this action again will not replace the previous operations.
+:::
 
   ``` ts
   const message: IMessage = {

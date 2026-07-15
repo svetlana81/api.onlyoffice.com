@@ -4,7 +4,7 @@ A button that displays an icon instead of text.
 
 **Interface**: IIconButton.
 
-## Parameters
+## Extra parameters
 
 ### iconName
 

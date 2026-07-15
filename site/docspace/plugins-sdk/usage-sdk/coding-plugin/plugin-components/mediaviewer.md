@@ -10,7 +10,7 @@ To control the media viewer, use the following actions in the [IMessage](../plug
 - **Actions.updateMediaViewer** - updates the currently open media viewer with `mediaViewerProps`.
 - **Actions.closeMediaViewer** - closes the media viewer.
 
-## Parameters
+## Extra parameters
 
 ### fileId
 

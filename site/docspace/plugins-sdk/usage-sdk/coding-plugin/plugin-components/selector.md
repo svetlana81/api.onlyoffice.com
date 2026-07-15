@@ -2,6 +2,8 @@
 
 A component for selecting files, folders, rooms, users, or groups. Five selector types are available: **Base**, **Files**, **Groups**, **People**, **Room**.
 
+**Types**: TBaseSelector, TFilesSelector, TGroupsSelector, TPeopleSelector, TRoomSelector.
+
 To control the selector, use the following actions in the [IMessage](../plugin-message.md) response:
 
 - **Actions.showSelector** - opens the selector with `selectorProps`.
@@ -17,7 +19,7 @@ The `selectorProps` passed in `IMessage` has the following structure:
 }
 ```
 
-To set the selector type, use [SelectorType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums): *Base, Files, Groups, People, Room*.
+To set the selector type, use [SelectorType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Selector.ts): *Base, Files, Groups, People, Room*.
 
 To set the room type, use [RoomsType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Rooms.ts): *PublicRoom, FormRoom, EditingRoom, VirtualDataRoom, CustomRoom*.
 
@@ -29,7 +31,7 @@ To set the room search area, use [RoomSearchArea](https://github.com/ONLYOFFICE/
 
 The following parameters are shared across all selector types.
 
-### id
+### id {#common-id}
 
 Optional. A unique identifier for the selector component.
 
@@ -109,7 +111,7 @@ Type: boolean
 
 Example: `false`
 
-### onSubmit
+### onSubmit {#common-onsubmit}
 
 A function called when the user clicks the submit button. Receives `selectedIds`, `fileName`, and `isFooterCheckboxChecked`. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
@@ -383,7 +385,7 @@ Type: [RoomSearchArea](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/ma
 
 Example: `RoomSearchArea.Active`
 
-### excludeItems
+### excludeItems {#room-excludeitems}
 
 Optional. Room ids to exclude from the list.
 
@@ -453,7 +455,7 @@ Type: string
 
 Example: `"user-123"`
 
-### excludeItems
+### excludeItems {#people-excludeitems}
 
 Optional. User or group ids to exclude from the list.
 
@@ -499,7 +501,7 @@ Example: `false`
 
 Used with `SelectorType.Groups`. Extends common parameters with the following:
 
-### onSubmit
+### onSubmit {#groups-onsubmit}
 
 A function called when the user clicks the submit button. Receives `selectedIds`, and optional `fileName` and `isFooterCheckboxChecked`. This function can be asynchronous and can return `IMessage`, `Promise<IMessage>`, or `Promise<void>`.
 
@@ -521,7 +523,7 @@ Type: string
 
 Example: `"Report.pdf"`
 
-### id
+### id {#item-id}
 
 Optional. A unique identifier for the item.
 
