@@ -8,6 +8,16 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Textarea](/assets/images/docspace/textarea.png)
 
+## Extra parameters
+
+### className
+
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+
+Type: string
+
+Example: "my-textarea"
+
 ## Example
 
 ``` ts
@@ -26,5 +36,6 @@ const onChange = (value: string) => {
 const props: ITextArea = {
   value: "",
   onChange,
+  className: "my-textarea",
 }
 ```

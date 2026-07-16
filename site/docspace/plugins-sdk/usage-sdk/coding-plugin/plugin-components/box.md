@@ -12,13 +12,29 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ### children
 
-The box components.
+Optional. The box components.
 
-Type: [Components](./component.md)[]
+Type: [Component](./component.md)[]
 
 Example: \[inputComponent]
 
 To set borders to the Box component, use a stroke or the [IBorderProp](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts) interface.
+
+### className
+
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+
+Type: string
+
+Example: "my-box"
+
+### id
+
+Optional. Sets a unique HTML `id` attribute of the component. Can be used for CSS styling or to reference the component from other elements.
+
+Type: string
+
+Example: "main-box"
 
 ## Example
 
@@ -39,6 +55,8 @@ const inputComponent: InputGroup = {
 
 const inputBox: IBox = {
   marginProp: "0 0 24px",
+  className: "my-box",
+  id: "main-box",
   children: [inputComponent],
 }
 ```

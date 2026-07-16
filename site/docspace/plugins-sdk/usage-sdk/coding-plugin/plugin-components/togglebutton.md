@@ -8,6 +8,16 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Toggle button](/assets/images/docspace/toggle-button.png)
 
+## Extra parameters
+
+### className
+
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+
+Type: string
+
+Example: "my-toggle-button"
+
 ## Example
 
 ``` ts
@@ -27,5 +37,6 @@ const libToggleButtonProps: IToggleButton = {
   isChecked: false,
   onChange,
   style: {position: "relative", gap: "0px"},
+  className: "my-toggle-button",
 }
 ```

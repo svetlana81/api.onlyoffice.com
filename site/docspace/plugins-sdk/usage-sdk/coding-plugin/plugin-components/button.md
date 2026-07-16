@@ -92,6 +92,14 @@ Type: boolean
 
 Example: true
 
+### className
+
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+
+Type: string
+
+Example: "my-button"
+
 ## Example
 
 ``` ts
@@ -104,6 +112,7 @@ const buttonProps: IButton = {
   scale: true,
   isDisabled: false,
   withLoadingAfterClick: true,
+  className: "my-button",
   onClick: () => {},
 }
 ```

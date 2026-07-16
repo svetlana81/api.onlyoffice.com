@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: -2
 ---
 
 # MainButtonPlugin
@@ -24,9 +24,9 @@ Add a new main button item.
 
 Parameters:
 
-| Name            | Type            | Example | Description                 |
-| --------------- | --------------- | ------- | --------------------------- |
-| mainButtonItems | IMainButtonItem |         | Defines a main button item. |
+| Name | Type            | Example | Description                 |
+| ---- | --------------- | ------- | --------------------------- |
+| item | IMainButtonItem |         | Defines a main button item. |
 
 ### getMainButtonItems
 
@@ -38,9 +38,9 @@ Update the main button item.
 
 Parameters:
 
-| Name            | Type            | Example | Description                     |
-| --------------- | --------------- | ------- | ------------------------------- |
-| mainButtonItems | IMainButtonItem |         | Defines a new main button item. |
+| Name | Type            | Example | Description                     |
+| ---- | --------------- | ------- | -------------------------------- |
+| item | IMainButtonItem |         | Defines a new main button item. |
 
 ## Example
 

@@ -4,6 +4,16 @@ A component that is used to embed a third-party website into a modal window or t
 
 **Interface**: [IFrame](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IFrame.ts).
 
+## Extra parameters
+
+### className
+
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+
+Type: string
+
+Example: "my-iframe"
+
 ## Example
 
 ``` ts
@@ -14,5 +24,6 @@ const frameProps: IFrame = {
   height: "100%",
   name: "test",
   src: "",
+  className: "my-iframe",
 }
 ```

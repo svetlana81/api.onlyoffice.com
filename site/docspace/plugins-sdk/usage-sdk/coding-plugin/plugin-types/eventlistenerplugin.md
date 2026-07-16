@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: 0
 ---
 
 # EventListenerPlugin
@@ -24,11 +24,11 @@ Add a new event listener item.
 
 Parameters:
 
-| Name               | Type               | Example | Description                     |
-| ------------------ | ------------------ | ------- | ------------------------------- |
-| eventListenerItems | IEventListenerItem |         | Defines an event listener item. |
+| Name | Type               | Example | Description                     |
+| ---- | ------------------ | ------- | -------------------------------- |
+| item | IEventListenerItem |         | Defines an event listener item. |
 
-## getEventListenerItems
+### getEventListenerItems
 
 Get all the event listener items.
 

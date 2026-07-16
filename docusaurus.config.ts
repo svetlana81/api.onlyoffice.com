@@ -183,7 +183,7 @@ const config: Config = {
       {
         trackingID: 'GTM-5NW47TX'
       },
-    ]
+    ],
   ],
 
   themeConfig: {
@@ -223,8 +223,20 @@ const config: Config = {
             },
             {
               type: 'docSidebar',
+              sidebarId: 'docsPlugins',
+              label: 'Plugins',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
               sidebarId: 'docsMacros',
-              label: 'Plugins and macros',
+              label: 'Macros',
+              docsPluginId: 'api',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docsAI',
+              label: 'AI',
               docsPluginId: 'api',
             },
             {

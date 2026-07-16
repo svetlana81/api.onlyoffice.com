@@ -10,6 +10,16 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 To create a combo box option, use [IComboBoxItem](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts).
 
+## Extra parameters
+
+### className
+
+Optional. Sets a CSS class name applied to the component. Can be used to override or extend the default component styles.
+
+Type: string
+
+Example: "my-combobox"
+
 ## Example
 
 ``` ts
@@ -18,7 +28,7 @@ import {Actions, type IComboBox, type IComboBoxItem, type IMessage} from "@onlyo
 const options: IComboBoxItem[] = [
   {key: "auto", label: "Auto"},
   {key: "en", label: "English"},
-  {key: "es", label: "EspaÃ±ol"},
+  {key: "es", label: "Español"},
   {key: "eu", label: "Euskara"},
 ]
 
@@ -40,5 +50,6 @@ const comboBox: IComboBox = {
   dropDownMaxHeight: 400,
   directionY: "both",
   scaledOptions: true,
+  className: "my-combobox",
 }
 ```
