@@ -14,7 +14,7 @@ You can use it as an [npm package](./quickstart.md#using-the-npm-package) for mo
 
 Before you begin, make sure you have the following:
 
-- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration.aspx?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer.aspx?from=api#docspace-developer)
+- A running DocSpace instance, either [cloud](https://www.onlyoffice.com/docspace-registration?from=api) or [self-hosted](https://www.onlyoffice.com/download-developer?from=api#docspace-developer)
 - The URL of your server added to the **Developer Tools** section in DocSpace settings under the **Embed SDK** tab
 - A server environment to serve your files from — opening an HTML file directly in the browser will not work
 - A modern browser — Chrome, Firefox, Edge, or Safari (the SDK relies on `postMessage` and other standard web APIs)
@@ -23,7 +23,7 @@ Before you begin, make sure you have the following:
 
 If your DocSpace instance is served over HTTPS, your embedding page must also be served over HTTPS. Browsers block mixed content (an HTTPS page loading resources from HTTP), which will prevent the SDK from loading correctly.
 
-Additionally, we recommend configuring HTTPS on your server and setting `"SameSite": "none"` in `appsettings.json`. This is to allow cross-domain cookies in stricter browser environments. Without HTTPS, the SDK may still work in some setups, but cross-origin authentication and session handling can fail depending on your browser's cookie policy.
+Additionally, we recommend configuring HTTPS on your server and setting `"SameSite": "None"` in `appsettings.json`. This is to allow cross-domain cookies in stricter browser environments. Without HTTPS, the SDK may still work in some setups, but cross-origin authentication and session handling can fail depending on your browser's cookie policy.
 
 :::
 
@@ -41,12 +41,10 @@ The SDK supports multiple initialization modes:
 | File selector | File picker dialog | Yes | No | No | Yes |
 | System | None (hidden frame) | N/A | N/A | N/A | Yes |
 | Uploader | File upload dialog | No | No | Yes (folder) | Yes |
-| Forms | Forms gallery | Yes | Yes | Yes (room) | Yes |
-| Chat | Chat interface | No | No | Yes (agent) | Yes |
 
 :::note
 - For Public room, editing is scoped to documents within the room.
-- Selector, system, uploader, and chat modes do not expose editing capabilities.
+- Selector, system, and uploader modes do not expose editing capabilities.
 :::
 
 Ready to embed DocSpace? Follow the [Quickstart](./quickstart.md).

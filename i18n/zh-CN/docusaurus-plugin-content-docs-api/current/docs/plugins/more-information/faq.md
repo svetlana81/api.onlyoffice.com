@@ -10,7 +10,7 @@ sidebar_position: -2
 
 ## 如何将插件调整为 ONLYOFFICE 样式？
 
-ONLYOFFICE 提供了专用样式表 [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css)，已连接到 *index.html* 文件。关于将 ONLYOFFICE 样式接入编辑器的详细说明，请参照[此页面](../fundamentals/configuration/styles-and-theming.md)。
+ONLYOFFICE 提供了专用样式表 [plugins.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css)，已连接到 *index.html* 文件。关于将 ONLYOFFICE 样式接入编辑器的详细说明，请参照[此页面](../configuration/styles-and-theming.md)。
 
 ## 如何本地化插件？
 
@@ -20,15 +20,15 @@ ONLYOFFICE 提供了专用样式表 [plugin.css](https://onlyoffice.github.io/sd
 - 本地化 *index.html* 和插件代码文件；
 - 将翻译应用到插件中。
 
-关于本地化的更多信息，请参阅[此页面](../structure/localization.md)。
+关于本地化的更多信息，请参阅[此页面](../configuration/localization.md)。
 
 ## 如何为插件创建“关于”窗口？
 
-你可以使用[插件变体](../fundamentals/configuration/variations.md)或**子插件**来创建插件的**关于**窗口或添加额外的插件设置。如要查看包含两个变体的插件示例，请点击[此处](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld)。除了在配置中设置两个变体，还需要额外创建一个 *index_about.html* 文件。
+你可以使用[插件变体](../configuration/variations.md)或**子插件**来创建插件的**关于**窗口或添加额外的插件设置。如要查看包含两个变体的插件示例，请点击[此处](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld)。除了在配置中设置两个变体，还需要额外创建一个 *index_about.html* 文件。
 
 ## 在哪里可以找到可供集成的现有插件？
 
-所有可用的现成插件都可以在 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh)中找到。
+所有可用的现成插件都可以在 [ONLYOFFICE 插件市场](https://github.com/ONLYOFFICE/onlyoffice.github.io)中找到。
 
 更多插件示例列在 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)，你可以自由地复制，并将它们作为创建自定义插件的参考。
 
@@ -42,7 +42,7 @@ ONLYOFFICE 提供了专用样式表 [plugin.css](https://onlyoffice.github.io/sd
 
 ## 可以在 ONLYOFFICE 编辑器中使用 Microsoft Office 宏吗？
 
-Microsoft Office 宏使用的是 VBA 脚本语言，而 ONLYOFFICE 编辑器使用 JavaScript。但将宏转换为新格式并不困难。你可以在[此处](../../macros/macros/converting-vba-macros.md)查看 MS VBA 宏的转换示例。
+Microsoft Office 宏使用的是 VBA 脚本语言，而 ONLYOFFICE 编辑器使用 JavaScript。但将宏转换为新格式并不困难。你可以在[此处](../../macros/guides/converting-vba-macros.md)查看 MS VBA 宏的转换示例。
 
 ## 在哪里可以找到编写宏的方法？
 
@@ -50,4 +50,4 @@ Microsoft Office 宏使用的是 VBA 脚本语言，而 ONLYOFFICE 编辑器使�
 
 ## 我可以将宏设为全局宏吗？
 
-宏是绑定到特定文档的，不能设置为全局宏。但你可以编写一个可以被所有用户加载的[插件](../structure/configuration/configuration.md)。
+宏是绑定到特定文档的，不能设置为全局宏。但你可以编写一个可以被所有用户加载的[插件](../configuration/configuration.md)。

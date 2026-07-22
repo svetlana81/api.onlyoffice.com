@@ -8,13 +8,13 @@ sidebar_position: -1
 
 ONLYOFFICE Desktop Editors is available for Windows, Linux and macOS. Starting from version 6.1, this application is also supported by ARM-based Apple Silicon Macs.
 
-The simplest way to install this application on your local computer is to download it from our official [website](https://www.onlyoffice.com/download-desktop.aspx).
+The simplest way to install this application on your local computer is to download it from our official [website](https://www.onlyoffice.com/download-desktop?from=api).
 
 For some Linux distributions, like Zorin OS, Linux Mint, Linkat, Linspire, etc., the ONLYOFFICE Desktop Editors package is already pre-installed or available on their official stores.
 
 ## How to enable debug mode?
 
-To enable [debug mode](../usage-api/debugging/running-in-debug-mode-on-windows.md), run the desktop editor with *--ascdesktop-support-debug-info* flag.
+To enable [debug mode](../usage-api/debugging.md), run the desktop editor with *--ascdesktop-support-debug-info* flag.
 
 ## How to add plugins to the desktop editors?
 

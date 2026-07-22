@@ -8,13 +8,13 @@ sidebar_position: -1
 
 ONLYOFFICE 桌面编辑器支持 Windows、Linux 和 macOS 系统。从 6.1 版本开始，该应用也支持基于 ARM 的 Apple Silicon 芯片的 Mac 设备。
 
-在本地计算机上安装此应用最简单的方法是从我们的官方[网站](https://www.onlyoffice.com/zh/download-desktop.aspx)下载。
+在本地计算机上安装此应用最简单的方法是从我们的官方[网站](https://www.onlyoffice.com/zh/download-desktop?from=api)下载。
 
 对于某些 Linux 发行版，如 Zorin OS、Linux Mint、Linkat、Linspire 等，ONLYOFFICE 桌面编辑器软件包已预装或可在其官方商店中获取。
 
 ## 如何启用调试模式？
 
-要启用[调试模式](../usage-api/debugging/running-in-debug-mode-on-windows.md)，请使用 *--ascdesktop-support-debug-info* 标志运行桌面编辑器。
+要启用[调试模式](../usage-api/debugging.md)，请使用 *--ascdesktop-support-debug-info* 标志运行桌面编辑器。
 
 ## 如何向桌面编辑器添加插件？
 

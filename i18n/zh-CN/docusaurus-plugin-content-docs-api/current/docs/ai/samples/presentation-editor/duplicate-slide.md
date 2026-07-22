@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: 在演示文稿中复制指定的幻灯片。
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---
@@ -81,7 +82,7 @@ func.call = async function (params) {
 };
 ```
 
-使用的方法：[GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [Duplicate](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/Duplicate.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+使用的方法：[GetPresentation](../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [Duplicate](../../../office-api/usage-api/presentation-api/ApiSlide/Methods/Duplicate.md), [Asc.scope object](../../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## 结果
 

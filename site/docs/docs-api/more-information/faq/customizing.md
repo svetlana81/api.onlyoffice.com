@@ -9,7 +9,7 @@ sidebar_position: -7
 The below options can be edited for whitelabeling your version of ONLYOFFICE Docs, changing the information which will be displayed at the **About** page and visible to all editor users.
 
 :::note
-Changing these options is only available to the [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx) users.
+Changing these options is only available to the [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices?from=api) users.
 :::
 
 - *editorConfig.customization.customer* options:
@@ -200,7 +200,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugins/fundamentals/configuration/config-json.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
+Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../plugins/configuration/configuration.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
 
 Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../usage-api/config/editor/plugins.md).
 
@@ -244,7 +244,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-These parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer.
+These parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices?from=api) of ONLYOFFICE Docs Developer.
 :::
 
 Further information about the interface font customization can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#font).
@@ -271,7 +271,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-These parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer.
+These parameters are available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices?from=api) of ONLYOFFICE Docs Developer.
 :::
 
 Further information about the editor header settings can be found [at this page](../../usage-api/config/editor/customization/customization-white-label.md#layoutheader).

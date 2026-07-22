@@ -1,4 +1,5 @@
 ---
+hide_table_of_contents: true
 description: Insert a table into a document.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
@@ -100,7 +101,7 @@ func.call = async function(params) {
 return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [MoveCursorToStart](/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToStart.md), [MoveCursorToEnd](/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToEnd.md), [CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md), [InsertContent](/docs/office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md), [SetWidth](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetWidth.md), [SetStyle](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetStyle.md), [GetCell](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [GetContent](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [GetElement](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetElement.md), [GetTextPr](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetTextPr.md), [SetBold](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [SetTextPr](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetTextPr.md), [Asc.scope object](/docs/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [MoveCursorToStart](../../../office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToStart.md), [MoveCursorToEnd](../../../office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToEnd.md), [CreateTable](../../../office-api/usage-api/document-api/Api/Methods/CreateTable.md), [InsertContent](../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md), [SetWidth](../../../office-api/usage-api/document-api/ApiTable/Methods/SetWidth.md), [SetStyle](../../../office-api/usage-api/document-api/ApiTable/Methods/SetStyle.md), [GetCell](../../../office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [GetContent](../../../office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [GetElement](../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetElement.md), [GetTextPr](../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetTextPr.md), [SetBold](../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [SetTextPr](../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetTextPr.md), [Asc.scope object](../../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 

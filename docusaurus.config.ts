@@ -13,8 +13,8 @@ function localize(translations: Record<string, string>): string {
 }
 
 const announcementBarContent = localize({
-  en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
-  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
+  en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
+  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4?from=api"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
 });
 
 let keyPath = '';
@@ -214,42 +214,57 @@ const config: Config = {
               sidebarId: 'docsDocs',
               label: 'Docs API',
               docsPluginId: 'api',
+              className: 'navbar-icon--docs-api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsOffice',
               label: 'Office API',
               docsPluginId: 'api',
+              className: 'navbar-icon--office-api',
+            },
+            {
+              type: 'html',
+              value: '<hr class="navbar-dropdown-separator" />',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsPlugins',
               label: 'Plugins',
               docsPluginId: 'api',
+              className: 'navbar-icon--plugins',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsMacros',
               label: 'Macros',
               docsPluginId: 'api',
+              className: 'navbar-icon--macros',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsAI',
               label: 'AI',
               docsPluginId: 'api',
+              className: 'navbar-icon--ai',
+            },
+            {
+              type: 'html',
+              value: '<hr class="navbar-dropdown-separator" />',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsBuilder',
               label: 'Document Builder',
               docsPluginId: 'api',
+              className: 'navbar-icon--builder',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docsDesktop',
               label: 'Desktop Editors',
               docsPluginId: 'api',
+              className: 'navbar-icon--desktop',
             },
           ],
         },
@@ -262,27 +277,31 @@ const config: Config = {
             {
               type: 'docSidebar',
               sidebarId: 'docspaceApiBackend',
-                label: 'API Reference',
+              label: 'API Reference',
               docsPluginId: 'api',
+              className: 'navbar-icon--docspace-api',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docspaceJSSdk',
-                label: 'Embed SDK',
+              label: 'Embed SDK',
               docsPluginId: 'api',
+              className: 'navbar-icon--embed-sdk',
             },
             {
               type: 'docSidebar',
               sidebarId: 'docspacePlugins',
               label: 'Plugins SDK',
               docsPluginId: 'api',
-             },
-             {
-               type: 'docSidebar',
-               sidebarId: 'docspaceMCPServer',
-               label: 'MCP Server',
-               docsPluginId: 'api',
-             },
+              className: 'navbar-icon--plugins',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'docspaceMCPServer',
+              label: 'MCP Server',
+              docsPluginId: 'api',
+              className: 'navbar-icon--mcp-server',
+            },
           ],
         },
         {
@@ -319,11 +338,11 @@ const config: Config = {
             },
             {
               label: 'For contributors',
-              href: 'https://www.onlyoffice.com/contribute.aspx?from=api',
+              href: 'https://www.onlyoffice.com/contribute?from=api',
             },
             {
               label: 'Legal notice',
-              href: 'https://www.onlyoffice.com/legalterms.aspx?from=api',
+              href: 'https://www.onlyoffice.com/legalterms?from=api',
             },
             {
               label: 'Legacy version',
@@ -344,11 +363,11 @@ const config: Config = {
             },
             {
               label: 'Installation guides',
-              href: 'https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api',
+              href: 'https://helpcenter.onlyoffice.com/installation/docs-developer-index?from=api',
             },
             {
               label: 'Support contact form',
-              href: 'https://www.onlyoffice.com/support-contact-form.aspx?from=api',
+              href: 'https://www.onlyoffice.com/support-contact-form?from=api',
             },
           ],
         },
