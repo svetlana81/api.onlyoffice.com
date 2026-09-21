@@ -2,11 +2,162 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://svetlana81.github.io/api.onlyoffice.com/changelog/</id>
     <title>ONLYOFFICE Blog</title>
-    <updated>2026-06-17T00:00:00.000Z</updated>
+    <updated>2026-07-14T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://svetlana81.github.io/api.onlyoffice.com/changelog/"/>
     <subtitle>ONLYOFFICE Blog</subtitle>
     <icon>https://svetlana81.github.io/api.onlyoffice.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Version 9.2.0]]></title>
+        <id>https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/14/version-9-2-0/</id>
+        <link href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/14/version-9-2-0/"/>
+        <updated>2026-07-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[New features]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-features">New features<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/14/version-9-2-0/#new-features" class="hash-link" aria-label="Direct link to New features" title="Direct link to New features" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Docs API</strong>:<!-- -->
+<ul>
+<li class="">Added Searching in PDF automation API sample.</li>
+<li class="">Added Changing text in PDF automation API sample.</li>
+<li class="">Added Redacting in PDF automation API sample.</li>
+<li class="">Documented the <code>title</code> config parameter.</li>
+</ul>
+</li>
+<li class=""><strong>Plugins and macros</strong>:<!-- -->
+<ul>
+<li class="">Added Wrap characters with dashes macro sample for the spreadsheet editor.</li>
+<li class="">Added Adding custom providers guide to the AI section.</li>
+</ul>
+</li>
+<li class=""><strong>DocSpace</strong>:<!-- -->
+<ul>
+<li class="">Added Styling plugin page to the Plugins SDK.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="improvements">Improvements<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/14/version-9-2-0/#improvements" class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Docs API</strong>:<!-- -->
+<ul>
+<li class="">Reworked React, Angular, and Vue component pages and reordered the frontend frameworks section.</li>
+<li class="">Added Automation API section to the Angular component page.</li>
+<li class="">Described configuration signing on frontend framework pages.</li>
+<li class="">Documented connector lifecycle in the Automation API.</li>
+<li class="">Clarified behavior of commands sent to a destroyed editor.</li>
+<li class="">Synced the Nextcloud integration article with upstream README changes.</li>
+<li class="">Documented Angular 22 support and replaced the removed <code>IConfig</code> type with <code>Config</code>.</li>
+<li class="">Explained iframe rendering and styling in the DocEditor.</li>
+<li class="">Updated the <code>uiTheme</code> parameter description with the <code>theme-system</code> and <code>theme-gray</code> themes, corrected the default light and dark theme IDs, and documented the theme priority order.</li>
+<li class="">Added a preview image for the Changing text in PDF automation API sample.</li>
+</ul>
+</li>
+<li class=""><strong>Office API</strong>:<!-- -->
+<ul>
+<li class="">Added Breaking changes section to the 9.4 changelog.</li>
+</ul>
+</li>
+<li class=""><strong>Plugins and macros</strong>:<!-- -->
+<ul>
+<li class="">Replaced section index pages with overview pages in plugins, macros, and AI sections.</li>
+<li class="">Marked the Check spelling AI sample as a draft.</li>
+<li class="">Added a FAQ entry on empty model lists for custom providers.</li>
+</ul>
+</li>
+<li class=""><strong>DocSpace</strong>:<!-- -->
+<ul>
+<li class="">Promoted Migration to a top-level heading in the plugin template page.</li>
+<li class="">Switched Plugins SDK build instructions from yarn to npm.</li>
+<li class="">Refreshed CLI, folder, and Adding plugin screenshots and added dark theme variants.</li>
+<li class="">Removed outdated version notes from the Adding plugin page.</li>
+<li class="">Structured the Plugins SDK sidebar into Get started, SDK usage, Samples, and More information.</li>
+<li class="">Synced generated Plugins SDK docs and repointed links to the typedoc structure.</li>
+<li class="">Added a dark theme variant for the plugin structure image on the Coding plugin page.</li>
+</ul>
+</li>
+<li class=""><strong>Common</strong>:<!-- -->
+<ul>
+<li class="">Updated Docusaurus to 3.10.2 and upgraded search/UI dependencies.</li>
+<li class="">Replaced deprecated <code>:::caution</code> admonitions with <code>:::warning</code>.</li>
+<li class="">Moved site redirects to Terraform management and enabled production deploy.</li>
+<li class="">Added docspace-plugin-sdk rebuild workflow and pinned Node 22 in SDK rebuilds.</li>
+<li class="">Updated <code>@onlyoffice/doceditor-types</code> to 9.4.1.</li>
+<li class="">Added a <code>/docs/document-builder/</code> redirect to the Get started overview.</li>
+<li class="">Added section root redirects to the Get started pages.</li>
+</ul>
+</li>
+<li class=""><strong>Localization</strong>:<!-- -->
+<ul>
+<li class="">Synced the zh-CN <code>uiTheme</code> description with the English version.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bugfixes">Bugfixes<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/14/version-9-2-0/#bugfixes" class="hash-link" aria-label="Direct link to Bugfixes" title="Direct link to Bugfixes" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Docs API</strong>:<!-- -->
+<ul>
+<li class="">Corrected onRequestHistory and onRequestHistoryData version history notes.</li>
+<li class="">Fixed sidebar position of the Searching in PDF sample.</li>
+</ul>
+</li>
+<li class=""><strong>Plugins and macros</strong>:<!-- -->
+<ul>
+<li class="">Improved the Ollama CORS configuration guide.</li>
+</ul>
+</li>
+<li class=""><strong>DocSpace</strong>:<!-- -->
+<ul>
+<li class="">Fixed inaccuracies and grammar in the Plugins SDK usage docs.</li>
+<li class="">Restored Plugins SDK content lost in the typedoc link repoint.</li>
+<li class="">Restored Plugins SDK screenshots.</li>
+<li class="">Fixed wording, heading levels, and a broken link on the MCP server installation page.</li>
+<li class="">Removed tabs that broke navigation on the MCP server installation page.</li>
+</ul>
+</li>
+<li class=""><strong>Playground</strong>:<!-- -->
+<ul>
+<li class="">Disconnected the connector before editor teardown.</li>
+</ul>
+</li>
+<li class=""><strong>Common</strong>:<!-- -->
+<ul>
+<li class="">Fixed broken redirect targets and repointed legacy Office API, Document Builder, plugin, filters, and apisystem redirects.</li>
+<li class="">Fixed the 9.1.0 changelog file name.</li>
+<li class="">Fixed broken plugins Get started links in earlier changelog entries.</li>
+</ul>
+</li>
+<li class=""><strong>Localization</strong>:<!-- -->
+<ul>
+<li class="">Fixed mistranslation of "editor" and a missing space on zh-CN frontend framework pages.</li>
+<li class="">Added zh-CN translation for the Searching in PDF sample.</li>
+<li class="">Fixed half-width punctuation, ASCII double hyphens, and product name spacing on zh-CN pages.</li>
+</ul>
+</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Version 9.1.0]]></title>
+        <id>https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/10/version-9-1-0/</id>
+        <link href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/10/version-9-1-0/"/>
+        <updated>2026-07-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Improvements]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="improvements">Improvements<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/10/version-9-1-0/#improvements" class="hash-link" aria-label="Direct link to Improvements" title="Direct link to Improvements" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>DocSpace</strong>:<!-- -->
+<ul>
+<li class="">Unified plugin installation paths in ready-to-use samples.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bugfixes">Bugfixes<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/07/10/version-9-1-0/#bugfixes" class="hash-link" aria-label="Direct link to Bugfixes" title="Direct link to Bugfixes" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Common</strong>: Updated download-docs URLs to new /download path. Removed .aspx extensions and added ?from=api tracking to onlyoffice.com URLs. Fixed text jump in ConfigEditor form inputs. Added batch language support to Docusaurus code block highlighting.</li>
+<li class=""><strong>Docs API</strong>: Fixed typos, grammar, and identifier formatting in the self-hosted installation page. Fixed code block language identifier in iOS integration page.</li>
+<li class=""><strong>Plugins and macros</strong>: Updated marketplace name, URLs, and CSS filename across plugin documentation. Normalized front matter in AI sample pages. Fixed invalid environment variables and CORS configuration in the Ollama guide. Fixed skipped heading levels in for-web-editors debugging page. Fixed code block language identifiers in Ollama and localization pages. Fixed code block identifiers and headings in custom-providers page.</li>
+<li class=""><strong>Desktop</strong>: Fixed plugin references and heading in the adding-plugins page. Fixed code block language identifiers in command-line-flags page.</li>
+<li class=""><strong>DocSpace</strong>: Fixed code errors, formatting, typos, and navigation paths across plugins-sdk samples. Fixed code block language identifier in global-configuration page.</li>
+<li class=""><strong>Playground</strong>: Fixed window.connector cleanup on PlaygroundPreview unmount.</li>
+</ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Version 9.0.0]]></title>
         <id>https://svetlana81.github.io/api.onlyoffice.com/changelog/2026/06/17/version-9-0-0/</id>
@@ -742,7 +893,7 @@
 <li class="">
 <p><strong>Plugins and Macros</strong>:</p>
 <ul>
-<li class="">Reworked the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/plugins/get-started/">Get Started</a> section with improved quick-start tutorials.</li>
+<li class="">Reworked the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/plugins/get-started/overview/">Get Started</a> section with improved quick-start tutorials.</li>
 <li class="">Added <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/plugins/get-started/quick-start/">Hello World Plugin</a> guide.</li>
 <li class="">Added <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/macros/get-started/quick-start/">Hello World Macro</a> guide.</li>
 <li class="">Added <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/ai/get-started/quick-start/">Comment Text AI Tool</a> tutorial.</li>
@@ -1136,46 +1287,6 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/24/version-7-6-1/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
 <ul>
 <li class=""><strong>Docs API</strong>: Edited the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/#favorite">document.info.favorite</a> parameter description</li>
-</ul>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Version 7.6.0]]></title>
-        <id>https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/19/version-7-6-0/</id>
-        <link href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/19/version-7-6-0/"/>
-        <updated>2025-12-19T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[New features]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-features">New features<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/19/version-7-6-0/#new-features" class="hash-link" aria-label="Direct link to New features" title="Direct link to New features" translate="no">​</a></h2>
-<ul>
-<li class=""><strong>DocSpace</strong>: Updated DocSpace version to 3.6</li>
-</ul>
-<ul>
-<li class=""><strong>Document Builder</strong>: Translated the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/document-builder/get-started/overview/">Document Builder</a> section into Chinese</li>
-</ul>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Version 7.5.0]]></title>
-        <id>https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/11/version-7-5-0/</id>
-        <link href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/11/version-7-5-0/"/>
-        <updated>2025-12-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[New features]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-features">New features<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/11/version-7-5-0/#new-features" class="hash-link" aria-label="Direct link to New features" title="Direct link to New features" translate="no">​</a></h2>
-<ul>
-<li class=""><strong>Office API</strong>: Updated the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/office-api/get-started/overview/">Office API documentation</a> for version 9.2.0.</li>
-<li class=""><strong>Plugins and macros</strong>:<!-- -->
-<ul>
-<li class="">Added the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/plugins/development-workflow/debugging/for-desktop-editors/">Debugging</a> subsection to the Tutorials section</li>
-<li class="">Updated the plugin <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/plugins/configuration/icons-and-branding/">Icons</a> page with additional info</li>
-<li class="">Added the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/plugins/interacting-with-editors/overview/how-to-customize-themes/">How to customize themes</a> page</li>
-<li class="">Added the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/plugins/configuration/localization/#troubleshooting-localization">Troubleshooting</a> section to the Localization page</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li class=""><strong>Desktop</strong>: Translated the <a class="" href="https://svetlana81.github.io/api.onlyoffice.com/docs/desktop-editors/get-started/overview/">Desktop Editors</a> section into Chinese</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fixes">Fixes<a href="https://svetlana81.github.io/api.onlyoffice.com/changelog/2025/12/11/version-7-5-0/#fixes" class="hash-link" aria-label="Direct link to Fixes" title="Direct link to Fixes" translate="no">​</a></h2>
-<ul>
-<li class=""><strong>Plugins and macros</strong>: Added missing links to the samples</li>
 </ul>]]></content>
     </entry>
 </feed>
