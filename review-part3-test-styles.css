@@ -1,0 +1,4 @@
+/* Deliberately obvious override, for the stylesUrl-in-Manager-mode live test. */
+body {
+  background-color: #ff00aa !important;
+}
